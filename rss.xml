@@ -772,7 +772,7 @@ SMAA S2x likely to be added depending on interest.&lt;&#x2F;p&gt;
 &lt;em&gt;Voxel Bunny rendering with conservative rasterization&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gfx-rs&#x2F;wgpu-rs&quot;&gt;wgpu&lt;&#x2F;a&gt; is a &lt;a href=&quot;https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;&quot;&gt;WebGPU&lt;&#x2F;a&gt; implementation in Rust. It is safe, efficient,
 and portable: can target both native (Vulkan&#x2F;D3D&#x2F;Metal) and the Web.&lt;&#x2F;p&gt;
-&lt;p&gt;Most progress in April was focused around &lt;a href=&quot;https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;wgsl&#x2F;&quot;&gt;WGSL&lt;&#x2F;a&gt; shaders and validation.
+&lt;p&gt;Most progress in March was focused around &lt;a href=&quot;https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;wgsl&#x2F;&quot;&gt;WGSL&lt;&#x2F;a&gt; shaders and validation.
 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gfx-rs&#x2F;naga&quot;&gt;naga&lt;&#x2F;a&gt; has seen a lot of improvements in the SPIR-V and WGSL parsing, as well
 as backend code generation. Most importantly, it now fully validates both
 statements and expressions. No more accidental foot shots from adding vec2
