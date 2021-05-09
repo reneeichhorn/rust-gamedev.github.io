@@ -631,7 +631,7 @@ GUI.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;021&#x2F;chip-8-rs.jpg&quot; alt=&quot;Screenshot of Pong with debugger&quot; &#x2F;&gt;
 &lt;em&gt;Debugging Pong&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;JonathanMurray&#x2F;chip-8-rs&quot;&gt;Chip-8-rs&lt;&#x2F;a&gt; by @jonathanmurray is
-a &lt;em&gt;CHIP-8&lt;&#x2F;em&gt; emulator with some basic debugging functionality.&lt;&#x2F;p&gt;
+a CHIP-8 emulator with some basic debugging functionality.&lt;&#x2F;p&gt;
 &lt;p&gt;When running a game through the emulator, CHIP-8 instructions are listed
 next to the main display, with the currently executed one highlighted. By
 running at a very low clock-frequency (and pausing&#x2F;resuming) you can step
