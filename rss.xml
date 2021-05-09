@@ -434,7 +434,7 @@ Rust discovery.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;how-to-write-a-crash-reporter&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.anthropicstudios.com&#x2F;2021&#x2F;03&#x2F;05&#x2F;crash-reporter&#x2F;&quot;&gt;How To Write a Crash Reporter&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#how-to-write-a-crash-reporter&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
 &lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;021&#x2F;wor-crash-reporter.jpg&quot; alt=&quot;How To Write a Crash Reporter&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;masonremaley&quot;&gt;@masonremaley&lt;&#x2F;a&gt; wrote &lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;021&#x2F;crash-reporter&quot;&gt;an article&lt;&#x2F;a&gt; walking
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;masonremaley&quot;&gt;@masonremaley&lt;&#x2F;a&gt; wrote &lt;a href=&quot;https:&#x2F;&#x2F;www.anthropicstudios.com&#x2F;2021&#x2F;03&#x2F;05&#x2F;crash-reporter&#x2F;&quot;&gt;an article&lt;&#x2F;a&gt; walking
 through &lt;a href=&quot;https:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;1110620?utm_campaign=tmirgd&amp;amp;utm_source=n21&quot;&gt;Way of Rhea&#x27;s&lt;&#x2F;a&gt; crash reporter implementation.&lt;&#x2F;p&gt;
 &lt;p&gt;The article covers how to detect a crash, how to report a crash via chat
 services like Discord or Slack, and how to implement a robust native UI on
@@ -660,13 +660,10 @@ works (or doesn&#x27;t work!).&lt;&#x2F;p&gt;
 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-gamedev&#x2F;rust-gamedev.github.io&quot;&gt;Send us a pull request&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Also, subscribe to &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;rust_gamedev&quot;&gt;@rust_gamedev on Twitter&lt;&#x2F;a&gt;
 or &lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust_gamedev&quot;&gt;&#x2F;r&#x2F;rust_gamedev subreddit&lt;&#x2F;a&gt; if you want to receive fresh news!&lt;&#x2F;p&gt;
-&lt;!--
-TODO: Add real links and un-comment once this post is published
-**Discuss this post on**:
-[&#x2F;r&#x2F;rust](TODO),
-[Twitter](TODO),
-[Discord](https:&#x2F;&#x2F;discord.gg&#x2F;yNtPTb2).
---&gt;
+&lt;p&gt;&lt;strong&gt;Discuss this post on&lt;&#x2F;strong&gt;:
+&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust_gamedev&#x2F;comments&#x2F;n8g79b&#x2F;this_month_in_rust_gamedev_21_april_2021&quot;&gt;&#x2F;r&#x2F;rust_gamedev&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;rust_gamedev&#x2F;status&#x2F;1391415309421187076&quot;&gt;Twitter&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;yNtPTb2&quot;&gt;Discord&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
         </item>
         <item>
