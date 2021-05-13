@@ -559,7 +559,7 @@ Egui 0.11 and implementing multiple windows support.&lt;&#x2F;p&gt;
 &lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;021&#x2F;puffin_egui.gif&quot; alt=&quot;puffin_egui&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;emilk&#x2F;puffin_egui&quot;&gt;puffin_egui&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;ernerfeldt&quot;&gt;@emilk&lt;&#x2F;a&gt; is an easy-to-use integration
-of the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;emilk&#x2F;puffin&quot;&gt;puffin&lt;&#x2F;a&gt; profiler for the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;emilk&#x2F;egui&quot;&gt;egui&lt;&#x2F;a&gt; GUI library.&lt;&#x2F;p&gt;
+of the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;EmbarkStudios&#x2F;puffin&quot;&gt;puffin&lt;&#x2F;a&gt; profiler for the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;emilk&#x2F;egui&quot;&gt;egui&lt;&#x2F;a&gt; GUI library.&lt;&#x2F;p&gt;
 &lt;p&gt;It has never been easier to add an in-game flamegraph profiler to your game!&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;rafx&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aclysma&#x2F;rafx&quot;&gt;rafx&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#rafx&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
 &lt;&#x2F;h3&gt;
