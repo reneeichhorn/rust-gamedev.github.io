@@ -7,7 +7,728 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://gamedev.rs/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 08 Jul 2021 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>This Month in Rust GameDev #23 - June 2021</title>
+            <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+            <link>https://gamedev.rs/news/023/</link>
+            <guid>https://gamedev.rs/news/023/</guid>
+            <description>&lt;p&gt;Welcome to the 23rd issue of the Rust GameDev Workgroup&#x27;s
+monthly newsletter.
+&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt; is a systems language pursuing the trifecta:
+safety, concurrency, and speed.
+These goals are well-aligned with game development.
+We hope to build an inviting ecosystem for anyone wishing
+to use Rust in their development process!
+Want to get involved? &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-gamedev&#x2F;wg#join-the-fun&quot;&gt;Join the Rust GameDev working group!&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You can follow the newsletter creation process
+by watching &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-gamedev&#x2F;rust-gamedev.github.io&#x2F;issues?q=label%3Acoordination&quot;&gt;the coordination issues&lt;&#x2F;a&gt;.
+Want something mentioned in the next newsletter?
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-gamedev&#x2F;rust-gamedev.github.io&quot;&gt;Send us a pull request&lt;&#x2F;a&gt;.
+Feel free to send PRs about your own projects!&lt;&#x2F;p&gt;
+&lt;!-- no toc --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;#game-updates&quot;&gt;Game Updates&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;#learning-material-updates&quot;&gt;Learning Material Updates&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;#engine-updates&quot;&gt;Engine Updates&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;#tooling-updates&quot;&gt;Tooling Updates&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;#library-updates&quot;&gt;Library Updates&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;#requests-for-contribution&quot;&gt;Requests for Contribution&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;!--
+Ideal section structure is:
+
+```
+### [Title]
+
+![image&#x2F;GIF description](image link)
+_image caption_
+
+A paragraph or two with a summary and [useful links].
+
+_Discussions:
+[&#x2F;r&#x2F;rust](https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust&#x2F;todo),
+[twitter](https:&#x2F;&#x2F;twitter.com&#x2F;todo&#x2F;status&#x2F;123456)_
+
+[Title]: https:&#x2F;&#x2F;first.link
+[useful links]: https:&#x2F;&#x2F;other.link
+```
+
+If needed, a section can be split into subsections with a &quot;------&quot; delimiter.
+--&gt;
+&lt;h2 id=&quot;rust-gamedev-meetup&quot;&gt;Rust GameDev Meetup&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#rust-gamedev-meetup&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;gamedev-meetup.png&quot; alt=&quot;Gamedev meetup poster&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The sixth Rust Gamedev Meetup happened in June. You can watch the recording of
+the meetup &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Wuwxh958P6I&quot;&gt;here on Youtube&lt;&#x2F;a&gt;. The meetups take place on
+the second Saturday every month via the &lt;a href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;yNtPTb2&quot;&gt;Rust Gamedev Discord
+server&lt;&#x2F;a&gt;, and are also &lt;a href=&quot;https:&#x2F;&#x2F;twitch.tv&#x2F;rustgamedevmeetup&quot;&gt;streamed on
+Twitch&lt;&#x2F;a&gt;. If you would like to show off what you&#x27;ve been
+working on in a future meetup, fill out &lt;a href=&quot;https:&#x2F;&#x2F;forms.gle&#x2F;BS1zCyZaiUFSUHxe6&quot;&gt;this form&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;game-updates&quot;&gt;Game Updates&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#game-updates&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;taileater&quot;&gt;taileater&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#taileater&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;taileater.gif&quot; alt=&quot;logo of a pixellated snake attempting to eat it&#x27;s own tail&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;taileater (&lt;a href=&quot;https:&#x2F;&#x2F;szunami.itch.io&#x2F;taileater&quot;&gt;itch.io&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;szunami&#x2F;taileater&#x2F;&quot;&gt;GitHub&lt;&#x2F;a&gt;) is a open source puzzle game
+in which you eat your own tail to win.&lt;&#x2F;p&gt;
+&lt;p&gt;The game is programmed in Rust using the Bevy engine.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;egregoria&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Uriopass&#x2F;Egregoria&quot;&gt;Egregoria&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#egregoria&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;egregoria.jpg&quot; alt=&quot;Egregoria in 3D&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Uriopass&#x2F;Egregoria&quot;&gt;Egregoria&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Uriopass&#x2F;Egregoria&quot;&gt;GitHub&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;CAaZhUJ&quot;&gt;Discord&lt;&#x2F;a&gt;)
+by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Uriopass&quot;&gt;@Uriopass&lt;&#x2F;a&gt;
+is a simulation oriented city builder that tries
+to replicate modern society as well as possible.&lt;&#x2F;p&gt;
+&lt;p&gt;It recently upgraded from a 2D top-down view to a
+3D third-person camera as seen in the screenshot above.&lt;&#x2F;p&gt;
+&lt;p&gt;Elevated roads and bridges are now possible, allowing to build
+&lt;a href=&quot;http:&#x2F;&#x2F;douady.paris&#x2F;blog&#x2F;img&#x2F;blog_9&#x2F;interchange.jpg&quot;&gt;complex highway interchanges&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Some technical details around the renderer with more screenshots,
+along with an architectural overview of the project can be read in the
+&lt;a href=&quot;https:&#x2F;&#x2F;douady.paris&#x2F;blog&#x2F;egregoria_9.html&quot;&gt;9th devlog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;open-combat&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;opencombat.bux.fr&quot;&gt;Open Combat&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#open-combat&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;open_combat.jpg&quot; alt=&quot;Open Combat logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;opencombat.bux.fr&quot;&gt;Open Combat&lt;&#x2F;a&gt;
+(&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;OpenCombatGame&quot;&gt;&#x2F;r&#x2F;OpenCombatGame&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;YD2V7XsBQZ&quot;&gt;Discord&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;discourse.opencombat.bux.fr&#x2F;&quot;&gt;Forum&lt;&#x2F;a&gt;)
+is a real time tactical game directly inspired by
+&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Close_Combat_(series)&quot;&gt;Close Combat Series&lt;&#x2F;a&gt;.
+The player takes control of soldier units and orders them to win the battles
+from a top down 2D view.&lt;&#x2F;p&gt;
+&lt;p&gt;The project recently started with Rust language after a Python language proof of
+concept in 2017. More info is available at &lt;a href=&quot;https:&#x2F;&#x2F;opencombat.bux.fr&quot;&gt;opencombat.bux.fr&lt;&#x2F;a&gt;,
+and you can find a
+&lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=pxVgjBKXlIw&quot;&gt;presentation&lt;&#x2F;a&gt; video and a game
+making of &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=3TOEZ7krhvI&quot;&gt;video&lt;&#x2F;a&gt; on YouTube.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;battleship-rs&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;deepu105&#x2F;battleship-rs&quot;&gt;Battleship.rs&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#battleship-rs&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;battleship.gif&quot; alt=&quot;Battleship gameplay&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;deepu105&#x2F;battleship-rs&quot;&gt;Battleship.rs&lt;&#x2F;a&gt; by
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;deepu105&quot;&gt;Deepu&lt;&#x2F;a&gt; is an open source Battleship game for
+the terminal built in Rust using the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fdehau&#x2F;tui-rs&quot;&gt;tui-rs&lt;&#x2F;a&gt;
+crate.&lt;&#x2F;p&gt;
+&lt;p&gt;The game uses different ship shapes, unlike the traditional vertical&#x2F;horizontal
+shapes, and has multiple game rules to choose from. There are two difficulty
+levels as well. The game is supported in Linux, Mac and Docker.&lt;&#x2F;p&gt;
+&lt;p&gt;If you have docker installed, you can play the game instantly by running&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;docker&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; run&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --rm -it&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; deepu105&#x2F;battleship:main
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The next iteration would be to support a WebAssembly version of the same.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;blightmud&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Blightmud&#x2F;Blightmud&quot;&gt;Blightmud&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#blightmud&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;blightmud.png&quot; alt=&quot;Blightmud logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Blightmud&#x2F;Blightmud&quot;&gt;Blightmud&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;qnxgUC5&quot;&gt;Discord&lt;&#x2F;a&gt;) is a mud client
+for the terminal inspired by &lt;a href=&quot;https:&#x2F;&#x2F;tintin.mudhalla.net&#x2F;&quot;&gt;tintin++&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;tinyfugue.sourceforge.net&#x2F;&quot;&gt;tinyfugue&lt;&#x2F;a&gt;
+allowing users to connect and get immersed in the worlds offered by text based
+online multi user dungeons known as muds.&lt;&#x2F;p&gt;
+&lt;p&gt;The project was birthed in April of 2020 and has come a long way since.  It now
+offers granular scripting access using &lt;a href=&quot;https:&#x2F;&#x2F;www.lua.org&#x2F;&quot;&gt;lua&lt;&#x2F;a&gt;, plugin handling, built in
+text-to-speech (via &lt;a href=&quot;https:&#x2F;&#x2F;freebsoft.org&#x2F;speechd&quot;&gt;Speech dispatcher&lt;&#x2F;a&gt;), split view scrolling, modern
+telnet protocols, and TLS connections to name a few.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-hat-chooses-the-wizard&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lostimmortal.itch.io&#x2F;the-hat-chooses-the-wizard&quot;&gt;The Hat Chooses the Wizard&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#the-hat-chooses-the-wizard&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;hatchooseswizard.jpg&quot; alt=&quot;Level 1-4 of the game &amp;quot;The Hat Chooses the Wizard&amp;quot; running on a Game Boy Advance&quot; &#x2F;&gt;
+&lt;em&gt;Runs on real hardware!&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The Hat Chooses the Wizard is a 2D platformer for the Game Boy Advance.&lt;&#x2F;p&gt;
+&lt;p&gt;It was made for this year&#x27;s Game Maker&#x27;s Toolkit (GMTK) game jam with the theme
+joined together and came in the top 25% of over 5800 entries. The game plays
+over 12 levels with the core mechanic being to throw your hat and then
+accelerate towards it. You can play it on a web-based emulator embedded on the
+&lt;a href=&quot;https:&#x2F;&#x2F;lostimmortal.itch.io&#x2F;the-hat-chooses-the-wizard&quot;&gt;itch&lt;&#x2F;a&gt; page.&lt;&#x2F;p&gt;
+&lt;p&gt;The game is written in pure Rust and uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;corwinkuiper&#x2F;agb&quot;&gt;agb&lt;&#x2F;a&gt; to
+interface with the hardware. The library is designed to allow you to write games
+without needing a detailed understanding of the hardware while still giving full
+access to all of its capabilities. It is under active development with
+plenty more features on the way.&lt;&#x2F;p&gt;
+&lt;p&gt;You can find the source code for the game &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;corwinkuiper&#x2F;joinedtogether&quot;&gt;here&lt;&#x2F;a&gt; and all
+feedback is welcome.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;themengi&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;vgel.me&#x2F;themengi&quot;&gt;Themengi&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#themengi&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;themengi.gif&quot; alt=&quot;User highlighting objects in the game world and parsing the phrase &amp;quot;dang puru rupuu kythengi&amp;quot; into the action &amp;quot;open&amp;quot;, object &amp;quot;door&amp;quot;, and mods &amp;quot;red&amp;quot; and &amp;quot;left&amp;quot;.&quot; &#x2F;&gt;
+&lt;em&gt;Demonstration of natural language parser with temporary words and grammar.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;vgel.me&#x2F;themengi&quot;&gt;Themengi&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;GpparbnXPC&quot;&gt;Discord&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;voooooogel&quot;&gt;Twitter&lt;&#x2F;a&gt;)
+is a puzzle adventure game where you learn an alien language,
+with completely unknown words and grammar, to navigate the world
+and find your way home.&lt;&#x2F;p&gt;
+&lt;p&gt;This month the &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=gtIphiK7tMs&quot;&gt;first devlog&lt;&#x2F;a&gt; for
+Themengi was published, discussing its natural language parser using
+Head-Driven Phrase Structure Grammar, the choice to use Bevy, a texture
+upscaling technique for faithful pixel art rendering, and implementing an
+outline shader in the Bevy render pipeline.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;dango&quot;&gt;&lt;a href=&quot;http:&#x2F;&#x2F;ernestwong.nz&#x2F;dango-tribute&#x2F;server&#x2F;&quot;&gt;Dango&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#dango&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;ernestwong.nz&#x2F;dango-tribute&#x2F;server&#x2F;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;dango.gif&quot; alt=&quot;Dango bouncing and jumping around&quot; &#x2F;&gt;&lt;&#x2F;a&gt;
+&lt;em&gt;Cute rice dumplings&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;ernestwong.nz&#x2F;dango-tribute&#x2F;server&#x2F;&quot;&gt;Dango&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ErnWong&#x2F;dango-tribute&quot;&gt;GitHub&lt;&#x2F;a&gt;) is a little multiplayer blob physics sandbox
+made by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ErnWong&quot;&gt;@ErnWong&lt;&#x2F;a&gt; as a tribute to the &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=XXDxZ0YGWG8&quot;&gt;Dango Daikazoku&lt;&#x2F;a&gt; from
+&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;List_of_Clannad_episodes&quot;&gt;Clannad&lt;&#x2F;a&gt;. It was made using various libraries from the Rust community,
+including the &lt;a href=&quot;https:&#x2F;&#x2F;bevyengine.org&#x2F;&quot;&gt;Bevy&lt;&#x2F;a&gt; game engine, the &lt;a href=&quot;https:&#x2F;&#x2F;nphysics.org&#x2F;&quot;&gt;NPhysics&lt;&#x2F;a&gt; physics engine, and the
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ErnWong&#x2F;crystalorb&quot;&gt;CrystalOrb&lt;&#x2F;a&gt; networking library. To avoid the costs of running a server, Dango
+currently runs the server in the browser and generates a unique URL that lets
+other players to join using WebRTC.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;fishgame&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fedorgames.itch.io&#x2F;fish-game&quot;&gt;FishGame&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#fishgame&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;fish.gif&quot; alt=&quot;FishGame&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fedorgames.itch.io&#x2F;fish-game&quot;&gt;FishGame&lt;&#x2F;a&gt; is a multiplayer brawler game made in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;not-fl3&#x2F;macroquad&quot;&gt;macroquad&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;FishGame started as a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;heroiclabs&#x2F;nakama-rs&quot;&gt;nakama-rs&lt;&#x2F;a&gt; showcase, but now it&#x27;s getting more life as
+an independent game. To make a transition from a tech demo to a real game,
+lots of playtesting and fine-tuning happened this month. Most noticeable
+improvements: a new physics system with throwable everything and a new
+zoom-to-fit camera system.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;hyper-farmer&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wilsk.itch.io&#x2F;hyper-farmer&quot;&gt;Hyper Farmer&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#hyper-farmer&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;hyperfarmer.png&quot; alt=&quot;Hyper Farmer logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The dubiously named &lt;a href=&quot;https:&#x2F;&#x2F;wilsk.itch.io&#x2F;hyper-farmer&quot;&gt;Hyper Farmer&lt;&#x2F;a&gt; was made for the GMTK Game Jam
+using the Bevy engine. For some reason, the player has to pick up all the hay from
+their fields using a giant laser slung between two tractors. Apart from the
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;NiklasEi&#x2F;bevy_game_template&quot;&gt;bevy_game_template&lt;&#x2F;a&gt;, all the artwork, music, and code was
+made over about 24 hours. The game can be played in the
+&lt;a href=&quot;https:&#x2F;&#x2F;wilsk.itch.io&#x2F;hyper-farmer&quot;&gt;browser&lt;&#x2F;a&gt;, and native builds are available
+on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;will-hart&#x2F;cloud-surfer&quot;&gt;github releases&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;way-of-rhea&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;1110620&quot;&gt;Way of Rhea&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#way-of-rhea&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;1110620&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;wor-dialogue.jpg&quot; alt=&quot;Way of Rhea on Steam&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;1110620&quot;&gt;Way of Rhea&lt;&#x2F;a&gt; is a picturesque puzzle platformer-without the platforming.
+Solve mind-bending color puzzles, unlock new areas of a vibrant hub world, and
+talk to NPCs to unravel the mysteries of a world you left behind!&lt;&#x2F;p&gt;
+&lt;p&gt;Way of Rhea is being produced by &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;masonremaley&quot;&gt;@masonremaley&lt;&#x2F;a&gt;. Latest Way of
+Rhea developments:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Most biomes now have narrative arcs, experienced in part through the
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;masonremaley&#x2F;status&#x2F;1400189924889042944&quot;&gt;new dialogue system&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;masonremaley&quot;&gt;@masonremaley&lt;&#x2F;a&gt; published
+&lt;a href=&quot;https:&#x2F;&#x2F;www.anthropicstudios.com&#x2F;2021&#x2F;06&#x2F;25&#x2F;when-to-rewrite&#x2F;&quot;&gt;a blog post, &lt;em&gt;When to Rewrite&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; outlining how he views the
+rewrite vs improve tradeoff in the Way of Rhea engine.&lt;&#x2F;li&gt;
+&lt;li&gt;Controller support was added, controls glyphs shown in game automatically
+reflect the most recently used input device.&lt;&#x2F;li&gt;
+&lt;li&gt;Fixes a player reported bug where undo&#x2F;redo resulted in a temporary slowdown
+due to a lack of communication with the sleep system.&lt;&#x2F;li&gt;
+&lt;li&gt;More puzzles!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;weegames&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;yeahross.itch.io&#x2F;weegames&quot;&gt;Weegames&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#weegames&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;weegames.jpg&quot; alt=&quot;Weegames menu&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;yeahross.itch.io&#x2F;weegames&quot;&gt;Weegames&lt;&#x2F;a&gt; is a fast-paced minigame collection.
+The web version now has a counter which tells you how many
+of the 41 minigames you&#x27;ve played. Also, the game shows
+a newly-added loading screen while downloading the
+initial assets.&lt;&#x2F;p&gt;
+&lt;p&gt;Note: These updates have not yet been rolled out to the
+downloadable Windows version.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;flesh&quot;&gt;Flesh&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#flesh&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;flesh.gif&quot; alt=&quot;flesh preview&quot; &#x2F;&gt;
+&lt;em&gt;demo build&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Flesh by &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;im_oab&quot;&gt;@im_oab&lt;&#x2F;a&gt; is a 2D-horizontal shmup game with hand-drawn animation and
+organic&#x2F;fleshy theme. It is implemented using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;17cupsofcoffee&#x2F;tetra&quot;&gt;Tetra&lt;&#x2F;a&gt;. This month, an internal
+demo build was released, with a development journal available on
+&lt;a href=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;drive&#x2F;folders&#x2F;1CppHsiteHDNofsVo2wHNNz_3E9YuK4Ay&quot;&gt;Google Drive&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;veloren&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;veloren.net&quot;&gt;Veloren&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#veloren&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;veloren.png&quot; alt=&quot;Cave run&quot; &#x2F;&gt; &lt;em&gt;Turns out the cave wasn&#x27;t empty&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;veloren.net&quot;&gt;Veloren&lt;&#x2F;a&gt; is an open world, open-source voxel RPG inspired by Dwarf
+Fortress and Cube World.&lt;&#x2F;p&gt;
+&lt;p&gt;In June, Veloren released 0.10. During the release party, some of the developers
+joined a voice call to stream the game and answer some questions about
+development. You can watch that stream &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=NMvEhymkqUw&quot;&gt;here&lt;&#x2F;a&gt;. A lot of metrics
+were recorded during the launch, and you can read about them in
+&lt;a href=&quot;https:&#x2F;&#x2F;veloren.net&#x2F;devblog-124&quot;&gt;blog #124&lt;&#x2F;a&gt;. At peak, 118 players were playing at the same
+time during the launch.&lt;&#x2F;p&gt;
+&lt;p&gt;The plugins system received a tutorial about how to get started. Caves were
+overhauled with lots of new content. Veloren has officially moved fully over to
+wgpu, which you can read all about in &lt;a href=&quot;https:&#x2F;&#x2F;veloren.net&#x2F;devblog-125&quot;&gt;blog #125&lt;&#x2F;a&gt;. Work has been
+done on hot reloading for easier access of assets in game. Lots of new models
+were added to the game, and bosses in dungeons are being overhauled with more
+skills to diversify combat.&lt;&#x2F;p&gt;
+&lt;p&gt;June&#x27;s full weekly devlogs: &amp;quot;This Week In Veloren...&amp;quot;:
+&lt;a href=&quot;https:&#x2F;&#x2F;veloren.net&#x2F;devblog-123&quot;&gt;#123&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;veloren.net&#x2F;devblog-124&quot;&gt;#124&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;veloren.net&#x2F;devblog-125&quot;&gt;#125&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;veloren.net&#x2F;devblog-126&quot;&gt;#126&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;projectris&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bonsairobo&#x2F;projectris&quot;&gt;Projectris&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#projectris&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;projectris.png&quot; alt=&quot;projectris&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bonsairobo&#x2F;projectris&quot;&gt;Projectris&lt;&#x2F;a&gt; is like Tetris, but in 2D and 3D at the same time.
+As the 3D piece falls, you can manipulate it, but all that matters
+are the shadows it casts on the 2D game boards on either side,
+each of which is played independently.&lt;&#x2F;p&gt;
+&lt;p&gt;While the full concept is already prototyped, there are still many features to
+implement before this is a real game:
+scoreboard, increasing fall speed, game over, JUICE.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bonsairobo&quot;&gt;@bonsairobo&lt;&#x2F;a&gt; is not actively working on this, but is
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bonsairobo&#x2F;projectris&quot;&gt;happy to accept PRs&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-process&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PlayTheProcess&quot;&gt;The Process&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#the-process&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;the_process.gif&quot; alt=&quot;The new terrain editor in The Process&quot; &#x2F;&gt;
+&lt;em&gt;Building the world, one voxel at a time&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PlayTheProcess&quot;&gt;The Process&lt;&#x2F;a&gt; by @setzer22 is an upcoming game about factory building,
+process management, and carrot production,
+built with Rust using the Godot game engine!&lt;&#x2F;p&gt;
+&lt;p&gt;In this month, the main focus has been towards the addition of a new terrain
+editor to speed up the creation of game levels. Terrain meshes are built using
+smooth voxels using the implementation in the &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;building_blocks_core&quot;&gt;building
+blocks&lt;&#x2F;a&gt; crate.&lt;&#x2F;p&gt;
+&lt;p&gt;This month has seen the following changes and improvements:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The new &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PlayTheProcess&#x2F;status&#x2F;1406707803637551107&quot;&gt;terrain
+editor&lt;&#x2F;a&gt;, with a
+minimalistic GUI built in Godot itself.&lt;&#x2F;li&gt;
+&lt;li&gt;A new &lt;a href=&quot;https:&#x2F;&#x2F;gfycat.com&#x2F;talkativeneatcatfish&quot;&gt;island&lt;&#x2F;a&gt;, fully made and
+procedurally textured with the new editor&lt;&#x2F;li&gt;
+&lt;li&gt;Implemented random factory maintenance
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PlayTheProcess&#x2F;status&#x2F;1403986026402619393&quot;&gt;events&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Migration of several old GDScript code into Rust, using the ECS pattern, like
+the system for character
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PlayTheProcess&#x2F;status&#x2F;1411410261651738635&quot;&gt;movement&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;Discussions:
+&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust_gamedev&#x2F;comments&#x2F;o3o8d0&#x2F;experimenting_with_the_building_blocks_crate&quot;&gt;&#x2F;r&#x2F;rust_gamedev&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;not-snake&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ramirezmike2.itch.io&#x2F;not-snake&quot;&gt;Not Snake&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#not-snake&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;notsnake.png&quot; alt=&quot;cube map, low poly dog and giant snake&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ramirezmike2.itch.io&#x2F;not-snake&quot;&gt;Not Snake&lt;&#x2F;a&gt; is a snake game in 3D with a twist:
+you&#x27;re the snake&#x27;s food!&lt;&#x2F;p&gt;
+&lt;p&gt;Check out the web version on the &lt;a href=&quot;https:&#x2F;&#x2F;ramirezmike2.itch.io&#x2F;not-snake&quot;&gt;game&#x27;s itch.io page&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;space-cakes&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;noxim.itch.io&#x2F;spacecakes&quot;&gt;Space:CAKES&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#space-cakes&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;cakes.png&quot; alt=&quot;screenshot&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;noxim.itch.io&#x2F;spacecakes&quot;&gt;Space:CAKES&lt;&#x2F;a&gt; is a sliding, repeating and funky puzzler
+about reaching the delicious cupcake across your spaceship.
+Made for the GMTK Game Jam.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You play as a cute alien, who has a limited amount of steps.
+He turns green when he can walk freely, but once he runs out of steps,
+he becomes red and can only push on crates.
+Luckily, some crates contain +1 or +2 steps for him,
+as long as he can push one into a laser.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;sokoban-sokoban&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;trouv.itch.io&#x2F;sokoban-sokoban&quot;&gt;sokoban-sokoban&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#sokoban-sokoban&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;sokoban-sokoban.png&quot; alt=&quot;screenshot&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;trouv.itch.io&#x2F;sokoban-sokoban&quot;&gt;sokoban-sokoban&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Trouv&#x2F;sokoban-sokoban&quot;&gt;source code&lt;&#x2F;a&gt;) by &lt;a href=&quot;https:&#x2F;&#x2F;trouv.itch.io&quot;&gt;@trouv&lt;&#x2F;a&gt;
+is a sokoban-like puzzle game made in 48 hours for the GMTK 2021 game jam.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Somebody messed up the graveyard! You can fix it, but your movements
+are joined together.
+More specifically, the location of the gravestones in the level&#x27;s movement
+table determines which movements are joined to which.
+When two movements are &amp;quot;joined&amp;quot;, the associated input performs BOTH movements!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;engine-updates&quot;&gt;Engine Updates&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#engine-updates&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;thrustengine-with-simple-shooter-game-demo&quot;&gt;thRustEngine - with simple shooter game demo&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#thrustengine-with-simple-shooter-game-demo&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;thrustengine_screenshot.jpg&quot; alt=&quot;thRustEngine screenshot&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is a simple descent&#x2F;quake style shooter written to demo
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;experiment9123&#x2F;thrustengine&quot;&gt;thRustEngine&lt;&#x2F;a&gt;. The current repo is a placeholder.&lt;&#x2F;p&gt;
+&lt;p&gt;It loads wavefront.OBJ, and Quake1&#x2F;Quake3 BSP worlds, converted to
+an internal format for collision and rendering. It uses clustered
+forward+ dynamic lighting and normal maps, and loads textures
+asynchronously.&lt;&#x2F;p&gt;
+&lt;p&gt;The future direction depends on community feedback (a public shared
+crate is planned). The current intention is to find a few close
+collaborators.&lt;&#x2F;p&gt;
+&lt;p&gt;Demo videos: &lt;a href=&quot;https:&#x2F;&#x2F;vimeo.com&#x2F;569777592&quot;&gt;free quake map demo&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;vimeo.com&#x2F;572436649&quot;&gt;custom map demo&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Discussions:
+&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust_gamedev&#x2F;comments&#x2F;obj38y&#x2F;rust_shooter_another_little_update&quot;&gt;&#x2F;r&#x2F;rust_gamedev&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rg3d&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mrDIMAS&#x2F;rg3d&quot;&gt;rg3d&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#rg3d&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;rg3d_logo.png&quot; alt=&quot;rg3d&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mrDIMAS&#x2F;rg3d&quot;&gt;rg3d&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;xENF5Uh&quot;&gt;Discord&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;DmitryNStepanov&quot;&gt;Twitter&lt;&#x2F;a&gt;) is a game engine that
+aims to be easy to use and provide a large set of out-of-box features. Some of
+the recent engine updates:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial support for custom rendering techniques.&lt;&#x2F;li&gt;
+&lt;li&gt;Word-based wrapping for FormattedText.&lt;&#x2F;li&gt;
+&lt;li&gt;Ability to specify material search options when loading a model.&lt;&#x2F;li&gt;
+&lt;li&gt;Render sky box in a single draw call.&lt;&#x2F;li&gt;
+&lt;li&gt;Fix for resource management issues.&lt;&#x2F;li&gt;
+&lt;li&gt;Fix for FBX loader in case of invalid mappings.&lt;&#x2F;li&gt;
+&lt;li&gt;Fix for triangulator.&lt;&#x2F;li&gt;
+&lt;li&gt;Physics for terrains.&lt;&#x2F;li&gt;
+&lt;li&gt;Heightfield visualization.&lt;&#x2F;li&gt;
+&lt;li&gt;Ability to pause sound contexts.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;editable&lt;&#x2F;code&gt; flag for text boxes.&lt;&#x2F;li&gt;
+&lt;li&gt;Various bug fixes and small improvements.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;rusty-editor updates:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ability to add&#x2F;remove&#x2F;edit sound sources&lt;&#x2F;li&gt;
+&lt;li&gt;Model import dialog window.&lt;&#x2F;li&gt;
+&lt;li&gt;Embed and fonts icons in the binary, which makes package distribution
+easier.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;.deb&lt;&#x2F;code&gt; and &lt;code&gt;.rpm&lt;&#x2F;code&gt; packages for Linux&lt;&#x2F;li&gt;
+&lt;li&gt;Camera fix + ability to preview scene cameras&lt;&#x2F;li&gt;
+&lt;li&gt;Icons for &amp;quot;shapeless&amp;quot; (lights, sound sources) objects in the scene.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;learning-material-updates&quot;&gt;Learning Material Updates&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#learning-material-updates&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;a-trig-less-line-of-sight-algorithm-for-2d-games&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;basstabs.github.io&#x2F;2d-line-of-sight&#x2F;&quot;&gt;A Trig-less Line of Sight Algorithm for 2D Games&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#a-trig-less-line-of-sight-algorithm-for-2d-games&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;lineofsight.png&quot; alt=&quot;2D Sight Example&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;basstabs&quot;&gt;@basstabs&lt;&#x2F;a&gt; published a tutorial that explains how to write a
+line of sight algorithm for 2D games in Rust without using trigonometry or
+square roots. It includes vector diagrams and typeset math to explain the ideas
+behind each stage of the algorithm, source code for each step, tests to verify
+the accuracy of the methods, and suggestions for further improvements.
+Additionally, the
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;basstabs&#x2F;2d-line-of-sight&quot;&gt;repository&lt;&#x2F;a&gt; contains benchmarks
+and a sample application written in &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;ggez&quot;&gt;ggez&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Discussions:
+&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust_gamedev&#x2F;comments&#x2F;nx79kq&#x2F;&quot;&gt;&#x2F;r&#x2F;rust_gamedev&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;when-to-rewrite&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.anthropicstudios.com&#x2F;2021&#x2F;06&#x2F;25&#x2F;when-to-rewrite&#x2F;&quot;&gt;When to Rewrite&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#when-to-rewrite&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.anthropicstudios.com&#x2F;2021&#x2F;06&#x2F;25&#x2F;when-to-rewrite&#x2F;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;when-to-rewrite.jpg&quot; alt=&quot;when-to-rewrite&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;masonremaley&quot;&gt;@masonremaley&lt;&#x2F;a&gt; wrote &lt;a href=&quot;https:&#x2F;&#x2F;www.anthropicstudios.com&#x2F;2021&#x2F;06&#x2F;25&#x2F;when-to-rewrite&#x2F;&quot;&gt;a blog post&lt;&#x2F;a&gt; offering an
+opinion on rewrites vs incremental migrations informed by his work on the
+&lt;a href=&quot;https:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;1110620&quot;&gt;Way of Rhea&lt;&#x2F;a&gt; engine.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A working system is a valuable asset. It works. It lets you test new ideas
+cheaply. Don&#x27;t take that for granted.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Discussions:
+&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust_gamedev&#x2F;comments&#x2F;o8dy0r&#x2F;when_to_rewrite&quot;&gt;&#x2F;r&#x2F;rust_gamedev&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;writing-the-bevy-retro-renderer&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;katharostech.com&#x2F;post&#x2F;writing-bevy-retros-renderer&quot;&gt;Writing the Bevy Retro Renderer&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#writing-the-bevy-retro-renderer&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;katharostech&quot;&gt;@katharostech&lt;&#x2F;a&gt; published an article about their experiences writing the render
+for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;katharostech&#x2F;bevy_retrograde&quot;&gt;Bevy Retro&lt;&#x2F;a&gt;. They walk through the different strategies and APIs
+they tried and explain why they wrote their own renderer in the first place.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;game-development-with-rust&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;pragmatic-programmers&#x2F;game-development-with-rust-31147f7b6096&quot;&gt;Game Development with Rust&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#game-development-with-rust&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;thebracket&#x2F;&quot;&gt;@thebracket&lt;&#x2F;a&gt; published an article on the current state of Rust Game
+Development. It covers a few games and engines made in Rust, links to some
+resources for integrating Rust into major game engines (Unity and Unreal).
+The article then links to some tutorials and resources for learning Rust
+game development at different skill and experience levels.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;how-to-make-plugins-system-with-rust-and-webassembly&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;devblog.arcana.rs&#x2F;how-to-make-plugins-system-with-rust-and-webassembly&quot;&gt;How to make plugins system with Rust and WebAssembly&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#how-to-make-plugins-system-with-rust-and-webassembly&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zakarumych&#x2F;&quot;&gt;@zakarumych&lt;&#x2F;a&gt; published an article about their experience creating
+a fully safe plugins system using plugins compiled to WebAssembly.
+It provides reasoning for choosing WASM in specific scenario
+and contains strategies for interacting with WASM modules embedded
+into an application,
+including dealing with dynamic memory of the module,
+string and array operations, function pointers, etc.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;getting-started-with-ecs-using-planck-ecs&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;jojolepro.com&#x2F;blog&#x2F;2021-06-01_getting_started_with_ecs&quot;&gt;Getting Started with ECS using Planck ECS&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#getting-started-with-ecs-using-planck-ecs&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;planck_ecs.png&quot; alt=&quot;planck logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jojolepro&#x2F;planck_ecs&quot;&gt;planck_ecs&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;patreon.com&#x2F;jojolepro&quot;&gt;@jojolepro&lt;&#x2F;a&gt; is a minimalist and safe ECS library.&lt;&#x2F;p&gt;
+&lt;p&gt;This month &lt;a href=&quot;https:&#x2F;&#x2F;patreon.com&#x2F;jojolepro&quot;&gt;@jojolepro&lt;&#x2F;a&gt; released a &lt;a href=&quot;https:&#x2F;&#x2F;jojolepro.com&#x2F;blog&#x2F;2021-06-01_getting_started_with_ecs&quot;&gt;tutorial&lt;&#x2F;a&gt;
+that describes how to use ECSes in general and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jojolepro&#x2F;planck_ecs&quot;&gt;planck_ecs&lt;&#x2F;a&gt; specifically.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tooling-updates&quot;&gt;Tooling Updates&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#tooling-updates&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;sugarcubes&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;henryksloan.github.io&#x2F;sugarcubes&#x2F;&quot;&gt;Sugarcubes&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#sugarcubes&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;sugarcubes.png&quot; alt=&quot;Sugarcubes Example&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;henryksloan.github.io&#x2F;sugarcubes&#x2F;&quot;&gt;Sugarcubes&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;henryksloan&quot;&gt;@henryksloan&lt;&#x2F;a&gt; is a tool for designing and testing automata.&lt;&#x2F;p&gt;
+&lt;p&gt;Sugarcubes allows for easy creation of models used in the theory of computing.
+It is designed to be a more intuitive and useful alternative to JFLAP,
+the most popular tool for designing automata and formal languages.
+It uses macroquad for the editor, and egui for the toolbars. Sugarcubes
+currently features a fully functional finite automaton editor and simulator,
+and many other models, editing features and simulations are planned.&lt;&#x2F;p&gt;
+&lt;p&gt;You can check out a &lt;a href=&quot;https:&#x2F;&#x2F;henryksloan.github.io&#x2F;sugarcubes&#x2F;&quot;&gt;live WASM demo here&lt;&#x2F;a&gt;,
+or the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;henryksloan&#x2F;sugarcubes&quot;&gt;source code on Github&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rusty-slider&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ollej.github.io&#x2F;rusty-slider&quot;&gt;Rusty Slider&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#rusty-slider&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;rustyslider.png&quot; alt=&quot;Rusty Slider code block example&quot; &#x2F;&gt;
+&lt;em&gt;Supports syntax highlighting of code blocks&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ollej.github.io&#x2F;rusty-slider&quot;&gt;Rusty Slider&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;ollej&quot;&gt;@ollej&lt;&#x2F;a&gt; is a markdown slideshow viewer
+written with macroquad.&lt;&#x2F;p&gt;
+&lt;p&gt;The game engine Macroquad can be used for more than just games. It’s also a
+great way to quickly build multi-platform tools with graphics.&lt;&#x2F;p&gt;
+&lt;p&gt;It’s possible to write presentations in plain text using Markdown. The
+application runs natively on all major platforms, and can also be used within
+a browser.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Supports headers, bold&#x2F;italic, blockquotes, lists, and code blocks with
+syntax highlighting.&lt;&#x2F;li&gt;
+&lt;li&gt;Automatically change slides.&lt;&#x2F;li&gt;
+&lt;li&gt;Themes separated from content.&lt;&#x2F;li&gt;
+&lt;li&gt;Toggle a CRT shader.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The latest feature added was to execute bash code blocks. The output of the
+execution will be shown below the code block. This is meant to be used for
+demo purposes, to show actual results of commands.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;graphite&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;GraphiteEditor&#x2F;Graphite&quot;&gt;Graphite&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#graphite&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;graphite-cherry-tree.png&quot; alt=&quot;Geometric cherry tree&quot; &#x2F;&gt;
+&lt;em&gt;Geometric cherry tree artwork by BillyDM, winner of last month&#x27;s first
+Graphite art contest&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Graphite (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;GraphiteEditor&#x2F;Graphite&quot;&gt;GitHub&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;discord.graphite.design&quot;&gt;Discord&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;GraphiteEditor&quot;&gt;Twitter&lt;&#x2F;a&gt;) is an in-development vector and
+raster graphics editor built on a non-destructive node-based workflow.&lt;&#x2F;p&gt;
+&lt;p&gt;Since last newsletter, the editor has received the ability to select layers via
+the layer panel and by clicking or dragging a box selection in the
+viewport. Selected layers can be deleted, duplicated, and copy&#x2F;pasted.&lt;&#x2F;p&gt;
+&lt;p&gt;It is now possible to create, edit, and close multiple documents in their own
+editor tabs. Additional frontend cleanup and polish has also improved many
+parts of the editor experience.&lt;&#x2F;p&gt;
+&lt;p&gt;Lastly, support for transforms was added to the layers and document, paving
+the way for moving&#x2F;scaling&#x2F;rotating layers and the whole document within the
+viewport.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;editor.graphite.design&quot;&gt;Try it right now in your browser.&lt;&#x2F;a&gt; Graphite is making
+rapid progress towards becoming a non-destructive, procedural graphics editor
+suitable of replacing traditional 2D DCC applications. Please
+&lt;a href=&quot;https:&#x2F;&#x2F;discord.graphite.design&quot;&gt;join the Discord&lt;&#x2F;a&gt; - and consider asking for a tour of the
+code and how you can help!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;texture-generator-v0-5&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Orchaldir&#x2F;texture_generator&quot;&gt;texture_generator&lt;&#x2F;a&gt; v0.5&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#texture-generator-v0-5&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;texture_generator.png&quot; alt=&quot;A black&amp;amp;white top-down image of some building&quot; &#x2F;&gt;
+&lt;em&gt;An depth image example&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Orchaldir&#x2F;texture_generator&quot;&gt;texture_generator&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Orchaldir&quot;&gt;Orchaldir&lt;&#x2F;a&gt; is a library to generate textures,
+and a library to use those textures to render tilemaps.&lt;&#x2F;p&gt;
+&lt;p&gt;This month the v0.5 version was released. Some of the updates:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The editor was switched to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hecrj&#x2F;iced&quot;&gt;Iced&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Layered textures.&lt;&#x2F;li&gt;
+&lt;li&gt;Door handles.&lt;&#x2F;li&gt;
+&lt;li&gt;More options for depth calculation: depth gradient along X or Y
+and barrel shape.&lt;&#x2F;li&gt;
+&lt;li&gt;Furniture can now have a fixed size or fill the selected area&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;Discussions:
+&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust_gamedev&#x2F;comments&#x2F;nz5ban&#x2F;i_switched_my_tilemap_editor_to_iced&quot;&gt;&#x2F;r&#x2F;rust_gamedev&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;library-updates&quot;&gt;Library Updates&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#library-updates&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;backroll-rs-and-ggrs&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;HouraiTeahouse&#x2F;backroll-rs&quot;&gt;backroll-rs&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gschup&#x2F;ggrs&quot;&gt;GGRS&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#backroll-rs-and-ggrs&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;HouraiTeahouse&#x2F;backroll-rs&quot;&gt;backroll-rs&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;VuZhs9V&quot;&gt;Discord&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;backroll&quot;&gt;crates.io&lt;&#x2F;a&gt;) by &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;james7132&quot;&gt;@james7132&lt;&#x2F;a&gt; and
+&lt;a href=&quot;%5Bcrates.io%5D(https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;ggrs)&quot;&gt;GGRS&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;g_schup&quot;&gt;@g_schup&lt;&#x2F;a&gt; are pure
+Rust implementations of the &lt;a href=&quot;https:&#x2F;&#x2F;www.ggpo.net&#x2F;&quot;&gt;GGPO&lt;&#x2F;a&gt; rollback networking library.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;rollback.jpg&quot; alt=&quot;Evo Moment 37&quot; &#x2F;&gt;
+&lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=JzS96auqau0&quot;&gt;Evo Moment 37&lt;&#x2F;a&gt;:
+Only offline or with rollback!&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Rollback networking is a peer-to-peer network technique designed to hide
+network latency in fast-paced games with precise inputs. Traditional techniques
+account for network transmission time by delaying the game execution, resulting
+in a sluggish game-feel. Rollback uses input prediction and speculative
+execution instead. Upon receiving inputs from remote clients, resimulation of
+incorrect game states occurs. This allows for gameplay that &amp;quot;feels just
+like offline&amp;quot;. The open source standard for rollback netcode &lt;a href=&quot;https:&#x2F;&#x2F;www.ggpo.net&#x2F;&quot;&gt;GGPO&lt;&#x2F;a&gt; is used
+in successful games like Skullgirls, Guilty Gear XX Accent Core +R or
+Fightcade. For further explanation about rollback,
+&lt;a href=&quot;https:&#x2F;&#x2F;ki.infil.net&#x2F;w02-netcode.html&quot;&gt;click here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Two projects in Rust were independently created to provide a working
+implementation as well as helpful resources for developers.
+backroll-rs features an added abstraction for the transportation layer and
+also provides a bevy plugin, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;HouraiTeahouse&#x2F;backroll-rs&#x2F;tree&#x2F;main&#x2F;bevy_backroll&quot;&gt;bevy-backroll&lt;&#x2F;a&gt;. GGRS replaces the
+C-style callback API of GGPO with a simpler, more understandable control flow.
+The authors of both libraries recommend backroll-rs for development,
+as it is currently more actively collaborated on.
+GGRS is recommended as a learning resource and entry point,
+with a plethora of internal documentation and explanation.&lt;&#x2F;p&gt;
+&lt;p&gt;The main requirement to make use of both presented libraries is determinism
+in your game execution. Resimulation requires that the result of progressing
+the game state depending on the given inputs yield the exact same results
+every time. Additionally, you need to be able to load, save and progress
+your gamestate without rendering the outcome.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are interested in integrating rollback networking into your game or
+just want to chat with other rollback developers (not limited to Rust),
+check out the &lt;a href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;8FKKhCRCCE&quot;&gt;GGPO Developers Discord&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;crystalorb&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ErnWong&#x2F;crystalorb&quot;&gt;CrystalOrb&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#crystalorb&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ernestwong.nz&#x2F;crystalorb&#x2F;demo&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;crystalorb.gif&quot; alt=&quot;CrystalOrb demo animation&quot; &#x2F;&gt;&lt;&#x2F;a&gt;
+&lt;em&gt;Interactive &lt;a href=&quot;https:&#x2F;&#x2F;ernestwong.nz&#x2F;crystalorb&#x2F;demo&quot;&gt;demo&lt;&#x2F;a&gt; that uses the &lt;a href=&quot;https:&#x2F;&#x2F;rapier.rs&quot;&gt;Rapier&lt;&#x2F;a&gt; physics engine.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ErnWong&#x2F;crystalorb&quot;&gt;CrystalOrb&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ErnWong&quot;&gt;@ErnWong&lt;&#x2F;a&gt; is a new networking library that aims to help
+fast-paced client-server games synchronize their game state across multiple
+clients. Just like &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;HouraiTeahouse&#x2F;backroll-rs&quot;&gt;backroll-rs&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gschup&#x2F;ggrs&quot;&gt;GGRS&lt;&#x2F;a&gt;, each CrystalOrb client predicts
+the next game state without waiting for other remote players&#x27; inputs to arrive.
+Unlike backroll-rs&#x27;s and GGRS&#x27;s peer-to-peer approach which only send input
+data between its peers, CrystalOrb relies on having a server to send
+authoritative snapshots of the entire game state to each client. In response,
+each client unconditionally rolls-back to that snapshot. Although this may lead
+to higher network and memory usage, it means that CrystalOrb clients can join
+and leave at any time, and games that cannot guarantee full-determinism can
+still work with CrystalOrb.&lt;&#x2F;p&gt;
+&lt;p&gt;This library was written as a learning exercise for the author, and as such,
+the author warns that this library may not be suitable for serious games.&lt;&#x2F;p&gt;
+&lt;p&gt;There is an &lt;a href=&quot;https:&#x2F;&#x2F;ernestwong.nz&#x2F;crystalorb&#x2F;demo&quot;&gt;interactive demo&lt;&#x2F;a&gt; of CrystalOrb that features the
+&lt;a href=&quot;https:&#x2F;&#x2F;rapier.rs&quot;&gt;Rapier&lt;&#x2F;a&gt; physics engine.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;glutin-and-winit&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-windowing&#x2F;glutin&quot;&gt;glutin&lt;&#x2F;a&gt; (and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-windowing&#x2F;winit&quot;&gt;winit&lt;&#x2F;a&gt;)&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#glutin-and-winit&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;winit-bug-1.gif&quot; alt=&quot;Animated image showing a window that is opened with a spinning cursor on top&quot; &#x2F;&gt;
+&lt;em&gt;This cursor may be waiting &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-windowing&#x2F;winit&#x2F;issues&#x2F;1682&quot;&gt;in vain&lt;&#x2F;a&gt;, but your patience shall be rewarded.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-windowing&#x2F;glutin&quot;&gt;glutin&lt;&#x2F;a&gt; is a low-level library for OpenGL context creation, written in pure Rust.
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-windowing&#x2F;glutin&quot;&gt;glutin&lt;&#x2F;a&gt; uses and re-exports &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-windowing&#x2F;winit&quot;&gt;winit&lt;&#x2F;a&gt;, which handles window creation and management,
+as well as various input devices.&lt;&#x2F;p&gt;
+&lt;p&gt;This month, glutin 0.27.0 was released, which makes glutin use the latest version
+of winit (0.25.0), which was released around a month prior to glutin 0.27.0. Usually,
+we try to keep glutin synced with winit, but we couldn&#x27;t quite manage to do it this
+time since the person who&#x27;d usually take responsibility for releasing a new version
+of glutin was unavailable, and no-one had the role of &amp;quot;back-up releaser&amp;quot;.
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maroider&quot;&gt;@maroider&lt;&#x2F;a&gt; has offered to fill this role for now.&lt;&#x2F;p&gt;
+&lt;p&gt;The upgrade to winit 0.25.0 brings with it a slew of bugfixes, a couple of new
+features, and a single breaking change to
+&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;winit&#x2F;0.24.0&#x2F;x86_64-apple-darwin&#x2F;winit&#x2F;platform&#x2F;macos&#x2F;trait.WindowBuilderExtMacOS.html#tymethod.with_activation_policy&quot;&gt;WindowBuilderExtMacOS::with_activation_policy&lt;&#x2F;a&gt;, which has been replaced by
+&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;winit&#x2F;0.25.0&#x2F;x86_64-apple-darwin&#x2F;winit&#x2F;platform&#x2F;macos&#x2F;trait.EventLoopExtMacOS.html#tymethod.set_activation_policy&quot;&gt;EventLoopExtMacOS::set_activation_policy&lt;&#x2F;a&gt;. For a full list of changes, refer
+to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-windowing&#x2F;winit&#x2F;blob&#x2F;master&#x2F;CHANGELOG.md#0250-2021-05-15&quot;&gt;winit&#x27;s changelog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The departure and disappearance of a couple of maintainers has left winit in need
+of someone knowledgeable with X11 in order to review pull requests and address
+various issues. Other backends also need some more love, but X11 is the most
+pressing.&lt;&#x2F;p&gt;
+&lt;p&gt;The project could also use more helping hands in general, in anything from
+mapping out platform differences and triaging bugs to reviewing PRs
+and tackling outstanding issues.
+The current maintainers would also be happy to have you even if
+all you do is answer platform-specific questions for them.
+If you&#x27;re interested, come say hi in their &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#Glutin:matrix.org&quot;&gt;matrix&lt;&#x2F;a&gt; channel or on
+any of the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-windowing&#x2F;winit#contact-us&quot;&gt;other services&lt;&#x2F;a&gt; bridged with matrix.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;egui&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;emilk&#x2F;egui&quot;&gt;egui&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#egui&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;egui.gif&quot; alt=&quot;egui&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;emilk&#x2F;egui&quot;&gt;egui&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;ernerfeldt&quot;&gt;@emilk&lt;&#x2F;a&gt; is an easy-to-use immediate mode GUI library in pure Rust.&lt;&#x2F;p&gt;
+&lt;p&gt;This month &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;emilk&#x2F;egui&#x2F;blob&#x2F;master&#x2F;CHANGELOG.md&quot;&gt;version 0.13&lt;&#x2F;a&gt; of egui was released, with a new visual style,
+resizable panels, more powerful plots, and more.&lt;&#x2F;p&gt;
+&lt;p&gt;You can try out egui in the &lt;a href=&quot;https:&#x2F;&#x2F;emilk.github.io&#x2F;egui&quot;&gt;online demo&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Discussions:
+&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;o76y9x&#x2F;announcing_egui_013&quot;&gt;&#x2F;r&#x2F;rust&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;erupt&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;Friz64&#x2F;erupt&quot;&gt;erupt&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#erupt&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;erupt.svg&quot; alt=&quot;erupt logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;Friz64&#x2F;erupt&quot;&gt;erupt&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;blog.friz64.de&#x2F;about&quot;&gt;@Friz64&lt;&#x2F;a&gt; provides bindings to the Vulkan API.&lt;&#x2F;p&gt;
+&lt;p&gt;Since being last mentioned in the newsletter shortly after its release, erupt
+has undergone significant development. The generator, erupt&#x27;s heart, has been
+rewritten from scratch with the aim to improve maintainability. On top of that,
+many bugs were fixed, the function loader was rewritten and usability was
+improved while always keeping up to date with the latest Vulkan Headers as best
+as possible.&lt;&#x2F;p&gt;
+&lt;p&gt;The ecosystem has gained traction, with many people using the crate for their
+projects. Pure Rust Vulkan allocators with support for erupt have been released.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;smooth-bevy-cameras&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bonsairobo&#x2F;smooth-bevy-cameras&quot;&gt;smooth-bevy-cameras&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#smooth-bevy-cameras&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bonsairobo&#x2F;smooth-bevy-cameras&quot;&gt;smooth-bevy-cameras&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bonsairobo&quot;&gt;@bonsairobo&lt;&#x2F;a&gt; is a small plugin for Bevy Engine that
+makes it simple to have &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Exponential_smoothing&quot;&gt;exponentially smoothed&lt;&#x2F;a&gt; camera transforms in your game.
+Just add a new bundle to your camera entity,
+and rather than updating a &lt;code&gt;Transform&lt;&#x2F;code&gt; directly, you can just update the &lt;code&gt;eye&lt;&#x2F;code&gt;
+and &lt;code&gt;target&lt;&#x2F;code&gt; values of a &lt;code&gt;LookTransform&lt;&#x2F;code&gt;, which will be automatically
+synchronized to the &lt;code&gt;Transform&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Several example controllers are provided as well:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;First Person&lt;&#x2F;li&gt;
+&lt;li&gt;Orbit&lt;&#x2F;li&gt;
+&lt;li&gt;Unreal Engine Viewport&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;wgpu-family-re-union&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gfx-rs&#x2F;wgpu&quot;&gt;wgpu&lt;&#x2F;a&gt; family re-union&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#wgpu-family-re-union&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;wgpu-family-reunion.jpg&quot; alt=&quot;wgpu family reunion&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gfx-rs&#x2F;wgpu&quot;&gt;wgpu&lt;&#x2F;a&gt; is a &lt;a href=&quot;https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webgpu&#x2F;&quot;&gt;WebGPU&lt;&#x2F;a&gt; implementation in Rust. It is safe, efficient,
+and portable: it can target both native and the Web.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gfx-rs&#x2F;wgpu&#x2F;milestone&#x2F;9?closed=1&quot;&gt;Family reunion&lt;&#x2F;a&gt; is by far the biggest change in wgpu project since
+the inception. First, the Rust API of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gfx-rs&#x2F;wgpu-rs&quot;&gt;wgpu-rs&lt;&#x2F;a&gt; was moved to the main
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gfx-rs&#x2F;wgpu&quot;&gt;wgpu&lt;&#x2F;a&gt; repository. Second, the whole base was relicensed under MIT&#x2F;Apache2.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gfx-rs&#x2F;gfx&quot;&gt;gfx-hal&lt;&#x2F;a&gt; - the Vulkan Portability-like graphics API abstraction -
+was detached from the project. Instead, wgpu got its own in-house unsafe
+abstraction called &amp;quot;wgpu-hal&amp;quot; developed within the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gfx-rs&#x2F;wgpu&quot;&gt;wgpu&lt;&#x2F;a&gt; repository.&lt;&#x2F;p&gt;
+&lt;p&gt;The team released &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;wgpu&#x2F;0.9.0&quot;&gt;wgpu-0.9&lt;&#x2F;a&gt; right before this transition, to give the new
+graphics infrastructure more time to take shape. At the time of writing,
+supported backends on the new HAL include Vulkan, Metal, and OpenGL ES3.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, the testing infrastructure received a major upgrade. It started
+rendering the examples on the available adapters and comparing the results
+with reference images.
+This includes automatic testing using software adapters on CI.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rafx&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aclysma&#x2F;rafx&quot;&gt;rafx&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#rafx&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=HlJsgbGyl0I&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;rafx-flythrough-demo.jpg&quot; alt=&quot;Rafx Flythrough Demo&quot; &#x2F;&gt;&lt;&#x2F;a&gt;
+&lt;em&gt;A scene exported via blender with animated camera motion, &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=HlJsgbGyl0I&quot;&gt;watch the demo on youtube&lt;&#x2F;a&gt;!&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aclysma&#x2F;rafx&quot;&gt;Rafx&lt;&#x2F;a&gt; is a multi-backend renderer that optionally integrates with the
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;amethyst&#x2F;distill&quot;&gt;distill&lt;&#x2F;a&gt; asset pipeline.&lt;&#x2F;p&gt;
+&lt;p&gt;This month, the asset pipeline received almost all the attention. A custom
+blender add-on was prototyped, and several project layouts were tested to
+decide on &amp;quot;best practices&amp;quot; to recommend for anyone that wants to use &lt;code&gt;rafx&lt;&#x2F;code&gt;
+with 3d assets.&lt;&#x2F;p&gt;
+&lt;p&gt;Using a custom add-on will enable a workflow that supports large scenes with
+many assets. The add-on currently exports textures, materials, meshes, models
+(a collection of meshes of varying LOD levels), and prefabs (a list of lights,
+meshes, etc. to place in the world).&lt;&#x2F;p&gt;
+&lt;p&gt;Some commercial art packs with varying art styles and complexity have been
+ported to this pipeline, and one of them was loaded into the demo. A
+fly-through camera was animated and exported out as json to demonstrate the
+scene.&lt;&#x2F;p&gt;
+&lt;p&gt;After prototyping is complete, details and lessons learned will be
+shared in hopes that it will be helpful to other projects in the rust
+community, even if they do not use rafx directly.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;egui-tetra&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;egui-tetra&quot;&gt;egui-tetra&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#egui-tetra&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;egui-tetra&quot;&gt;egui-tetra&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tesselode&#x2F;egui-tetra&quot;&gt;GitHub&lt;&#x2F;a&gt;) by &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;tesselode&quot;&gt;@tesselode&lt;&#x2F;a&gt; is a library
+that integrates &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;emilk&#x2F;egui&quot;&gt;egui&lt;&#x2F;a&gt;, an immediate mode GUI library,
+with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;17cupsofcoffee&#x2F;tetra&quot;&gt;Tetra&lt;&#x2F;a&gt;, a 2D game framework.&lt;&#x2F;p&gt;
+&lt;p&gt;egui-tetra provides helpers for integrating egui with Tetra&#x27;s event loop and
+rendering the GUI.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Discussions:
+&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;o8jbmg&#x2F;eguitetra_v010_egui_integration&quot;&gt;&#x2F;r&#x2F;rust&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;bevy-midi&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BlackPhlox&#x2F;bevy_midi&quot;&gt;bevy_midi&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#bevy-midi&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;bevy_midi_logo.svg&quot; alt=&quot;bevy_midi logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BlackPhlox&#x2F;bevy_midi&quot;&gt;bevy_midi&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BlackPhlox&quot;&gt;@BlackPhlox&lt;&#x2F;a&gt; is a new bevy plugin that uses
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Boddlnagg&#x2F;midir&quot;&gt;midir&lt;&#x2F;a&gt; to interact with the bevy game engine.&lt;&#x2F;p&gt;
+&lt;p&gt;It started out with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BlackPhlox&#x2F;bevy_osc&quot;&gt;bevy_osc&lt;&#x2F;a&gt; as a
+proof-of-concept interfacing with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nannou-org&#x2F;nannou_osc&quot;&gt;nannou_osc&lt;&#x2F;a&gt;
+and using other osc software to communicate with bevy.
+Soon, realizing that nannou_osc is not that different
+from how you interface with midi, bevy_midi was born.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is one of the examples which you can use a midi controller
+to play piano with &lt;a href=&quot;https:&#x2F;&#x2F;discord.com&#x2F;channels&#x2F;691052431525675048&#x2F;692648638823923732&#x2F;857177113923682304&quot;&gt;demo_audio&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The plugin is still in its infancy.
+So it still has some performance issues, so
+any feedback and contributions are highly appreciated.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;bevy-config-cam&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BlackPhlox&#x2F;bevy_config_cam&quot;&gt;bevy_config_cam&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#bevy-config-cam&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;023&#x2F;bevy_config_cam_logo.svg&quot; alt=&quot;bevy_config_cam logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BlackPhlox&#x2F;bevy_config_cam&quot;&gt;bevy_config_cam&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BlackPhlox&quot;&gt;@BlackPhlox&lt;&#x2F;a&gt;
+is an all-in-one purpose camera&#x2F;player controller for bevy.&lt;&#x2F;p&gt;
+&lt;p&gt;With focus on plug-and-play, flexibility and ease of use, this bevy plugin is
+for anyone who is prototyping in 3D and doesn&#x27;t want the hassle of programming
+a player-controller from scratch. Instantly switch between camera modes such as
+Tracking to Topdown, Follow Behind, FPS and Free and more.&lt;&#x2F;p&gt;
+&lt;p&gt;The plugin is very new.
+So any feedback and contributions are highly appreciated.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;assets-manager&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;a1phyr&#x2F;assets_manager&quot;&gt;assets_manager&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#assets-manager&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;a1phyr&#x2F;assets_manager&quot;&gt;assets_manager&lt;&#x2F;a&gt; provides easy file loading and caching, with a focus on
+hot-reloading.&lt;&#x2F;p&gt;
+&lt;p&gt;In June was released version 0.5.0, which came with many new features.
+&lt;code&gt;assets_manager&lt;&#x2F;code&gt; has now built-in support for loading sounds and images, and
+Zip archive were added as a new source to load assets from. Additionally, the
+API around directories was reworked to be more powerful, and performances were
+improved a bit.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;requests-for-contribution&quot;&gt;Requests for Contribution&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#requests-for-contribution&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;!-- Links to &quot;good first issue&quot;-labels or direct links to specific tasks --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;search?q=user:EmbarkStudios+state:open&quot;&gt;winit&#x27;s &amp;quot;difficulty: easy&amp;quot; issues&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;HouraiTeahouse&#x2F;backroll-rs&quot;&gt;Backroll-rs, a new networking library&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;search?q=user:EmbarkStudios+state:open&quot;&gt;Embark&#x27;s open issues&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;embark.rs&quot;&gt;embark.rs&lt;&#x2F;a&gt;).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gfx-rs&#x2F;wgpu&#x2F;issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22&quot;&gt;wgpu-rs&#x27;s &amp;quot;help wanted&amp;quot; issues&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phaazon&#x2F;luminance-rs&#x2F;issues?q=is%3Aissue+is%3Aopen+label%3A%22low+hanging+fruit%22&quot;&gt;luminance&#x27;s &amp;quot;low hanging fruit&amp;quot; issues&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ggez&#x2F;ggez&#x2F;labels&#x2F;%2AGOOD%20FIRST%20ISSUE%2A&quot;&gt;ggez&#x27;s &amp;quot;good first issue&amp;quot; issues&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;veloren&#x2F;veloren&#x2F;issues?label_name=beginner&quot;&gt;Veloren&#x27;s &amp;quot;beginner&amp;quot; issues&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;amethyst&#x2F;amethyst&#x2F;issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22&quot;&gt;Amethyst&#x27;s &amp;quot;good first issue&amp;quot; issues&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;a-b-street&#x2F;abstreet&#x2F;issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22&quot;&gt;A&#x2F;B Street&#x27;s &amp;quot;good first issue&amp;quot; issues&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mun-lang&#x2F;mun&#x2F;labels&#x2F;good%20first%20issue&quot;&gt;Mun&#x27;s &amp;quot;good first issue&amp;quot; issues&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mkhan45&#x2F;SIMple-Mechanics&#x2F;labels&#x2F;good%20first%20issue&quot;&gt;SIMple Mechanic&#x27;s good first issues&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bevyengine&#x2F;bevy&#x2F;labels&#x2F;good%20first%20issue&quot;&gt;Bevy&#x27;s &amp;quot;good first issue&amp;quot; issues&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;That&#x27;s all news for today, thanks for reading!&lt;&#x2F;p&gt;
+&lt;p&gt;Want something mentioned in the next newsletter?
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-gamedev&#x2F;rust-gamedev.github.io&quot;&gt;Send us a pull request&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Also, subscribe to &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;rust_gamedev&quot;&gt;@rust_gamedev on Twitter&lt;&#x2F;a&gt;
+or &lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust_gamedev&quot;&gt;&#x2F;r&#x2F;rust_gamedev subreddit&lt;&#x2F;a&gt; if you want to receive fresh news!&lt;&#x2F;p&gt;
+&lt;!--
+TODO: Add real links and un-comment once this post is published
+**Discussions of this post**:
+[&#x2F;r&#x2F;rust](TODO),
+[twitter](TODO).
+--&gt;
+</description>
+        </item>
         <item>
             <title>This Month in Rust GameDev #22 - May 2021</title>
             <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
