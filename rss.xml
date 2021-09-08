@@ -263,9 +263,9 @@ and
 &lt;h3 id=&quot;murder-user-dungeon&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;sheepyhead.itch.io&#x2F;murder-user-dungeon&quot;&gt;Murder-User Dungeon&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#murder-user-dungeon&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
 &lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;025&#x2F;mud_screenshots.png&quot; alt=&quot;Murder-User Dungeon gameplay screenshots&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Murder-User Dungeon (MUD) (&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;025&#x2F;mud-github&quot;&gt;GitHub&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;025&#x2F;mud-itch&quot;&gt;Itch&lt;&#x2F;a&gt;) by
-&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;025&#x2F;nightlyside&quot;&gt;@Nightlyside&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;025&#x2F;cdsupina&quot;&gt;@cdsupina&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;025&#x2F;sheepyhead&quot;&gt;@Shippyhead&lt;&#x2F;a&gt; is
-a 2D game made for the &lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;025&#x2F;rusty-jam-21&quot;&gt;Rusty Jam 21&lt;&#x2F;a&gt; in just one week with the
+&lt;p&gt;Murder-User Dungeon (MUD) (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;TheRealTeamFReSh&#x2F;MurderUserDungeon&quot;&gt;GitHub&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;sheepyhead.itch.io&#x2F;murder-user-dungeon&quot;&gt;Itch&lt;&#x2F;a&gt;) by
+&lt;a href=&quot;https:&#x2F;&#x2F;nightlyside.github.io&#x2F;&quot;&gt;@Nightlyside&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;cdsupina&quot;&gt;@cdsupina&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Sheepyhead&quot;&gt;@Shippyhead&lt;&#x2F;a&gt; is
+a 2D game made for the &lt;a href=&quot;https:&#x2F;&#x2F;itch.io&#x2F;jam&#x2F;rusty-jam&quot;&gt;Rusty Jam 21&lt;&#x2F;a&gt; in just one week with the
 theme &amp;quot;&lt;em&gt;Illusion of Security&lt;&#x2F;em&gt;&amp;quot;.&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Tony is a young man. Finally having his own apartment is a good thing! He will
@@ -284,11 +284,11 @@ apartment at first - however as the game goes on and the player makes enemies of
 other gamers in the Labyrinth, they risk them coming to their apartment to get
 revenge.&lt;&#x2F;p&gt;
 &lt;p&gt;The team split development of the game, so that each member could work
-independently on separate features. While &lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;025&#x2F;cdsupina&quot;&gt;@cdsupina&lt;&#x2F;a&gt; worked on the
-needs system and the graphics, &lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;025&#x2F;sheepyhead&quot;&gt;@Sheepyhead&lt;&#x2F;a&gt; worked on the UI and
-menus, and &lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;025&#x2F;nightlyside&quot;&gt;@Nightlyside&lt;&#x2F;a&gt; worked on the console and Labyrinth
+independently on separate features. While &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;cdsupina&quot;&gt;@cdsupina&lt;&#x2F;a&gt; worked on the
+needs system and the graphics, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Sheepyhead&quot;&gt;@Sheepyhead&lt;&#x2F;a&gt; worked on the UI and
+menus, and &lt;a href=&quot;https:&#x2F;&#x2F;nightlyside.github.io&#x2F;&quot;&gt;@Nightlyside&lt;&#x2F;a&gt; worked on the console and Labyrinth
 gameplay.&lt;&#x2F;p&gt;
-&lt;p&gt;MUD was developed using the &lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;025&#x2F;bevy-engine&quot;&gt;Bevy game engine&lt;&#x2F;a&gt;, Rapier2D for
+&lt;p&gt;MUD was developed using the &lt;a href=&quot;https:&#x2F;&#x2F;bevyengine.org&#x2F;&quot;&gt;Bevy game engine&lt;&#x2F;a&gt;, Rapier2D for
 collisions, Aseprite for the graphics, and a lot of free assets from the
 internet (which are credited at the end of the game&#x27;s description).&lt;&#x2F;p&gt;
 &lt;p&gt;Linux and Windows builds are available on the Itch page, and feedback is
@@ -574,13 +574,10 @@ is also in progress.&lt;&#x2F;li&gt;
 &lt;p&gt;Also, subscribe to &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;rust_gamedev&quot;&gt;@rust_gamedev on Twitter&lt;&#x2F;a&gt;
 or the &lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust_gamedev&quot;&gt;&#x2F;r&#x2F;rust_gamedev subreddit&lt;&#x2F;a&gt; if you want to receive fresh
 news and updates about the ecosystem every day!&lt;&#x2F;p&gt;
-&lt;!--
-TODO: Add real links and un-comment once this post is published
-**Discussions of this post**:
-[&#x2F;r&#x2F;rust_gamedev](TODO),
-[Twitter](TODO),
-[Discord](https:&#x2F;&#x2F;discord.gg&#x2F;yNtPTb2).
---&gt;
+&lt;p&gt;&lt;strong&gt;Discussions of this post&lt;&#x2F;strong&gt;:
+&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;rust_gamedev&#x2F;comments&#x2F;pki6iw&#x2F;this_month_in_rust_gamedev_25_august_2021&#x2F;&quot;&gt;&#x2F;r&#x2F;rust_gamedev&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;rust_gamedev&#x2F;status&#x2F;1435700216510943234&quot;&gt;Twitter&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;yNtPTb2&quot;&gt;Discord&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
         </item>
         <item>
