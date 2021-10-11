@@ -498,15 +498,15 @@ amortized across multiple invocations. &lt;code&gt;EntityRef&lt;&#x2F;code&gt;&#
 a single-entity &lt;code&gt;query&lt;&#x2F;code&gt; method, and now exposes the referenced entity&#x27;s
 handle. Finally, &lt;code&gt;World::spawn_batch&lt;&#x2F;code&gt; and &lt;code&gt;reserve&lt;&#x2F;code&gt; were optimized for better
 performance when called repeatedly.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;ktx2&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;026&#x2F;ktx2-github&quot;&gt;ktx2&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#ktx2&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;h3 id=&quot;ktx2&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BVE-Reborn&#x2F;ktx2&quot;&gt;ktx2&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#ktx2&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
 &lt;&#x2F;h3&gt;
 &lt;p&gt;A revamped and refactored version of @F3kilo&#x27;s ktx2-reader,
 this serves as a parsing library for the texture container format
 of ktx2. This format allows you to store textures in formats that
 GPU apis directly accept, without decoding costs. For more information,
-&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;026&#x2F;ktx2-docs&quot;&gt;read the docs&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;ktx2&quot;&gt;read the docs&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;ktx2 writing support will come a future release.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;rend3&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;026&#x2F;rend3-github&quot;&gt;rend3&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#rend3&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;h3 id=&quot;rend3&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BVE-Reborn&#x2F;rend3&quot;&gt;rend3&lt;&#x2F;a&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#rend3&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
 &lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;026&#x2F;rend3-scifi.jpg&quot; alt=&quot;rend3 sci-fi base scene&quot; &#x2F;&gt;
 &lt;em&gt;rend3 rendering a complex scene&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
@@ -517,7 +517,7 @@ GPU culling to enable incredible performance with such a simple API.&lt;&#x2F;p&
 &lt;p&gt;There&#x27;re many fun things in the pipeline including a full custom shader
 system, both cpu and gpu side optimization, and more rendering features.&lt;&#x2F;p&gt;
 &lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;rend3&quot;&gt;v0.1 version&lt;&#x2F;a&gt; was published on crates.io
-(&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;026&#x2F;rend3-docs&quot;&gt;docs&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;026&#x2F;rend3-examples&quot;&gt;examples&lt;&#x2F;a&gt;) and v0.2 is going
+(&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;rend3&quot;&gt;docs&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BVE-Reborn&#x2F;rend3&#x2F;tree&#x2F;v0.1.2&#x2F;examples&quot;&gt;examples&lt;&#x2F;a&gt;) and v0.2 is going
 to be coming out very soon.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;imgui-rs-v0-8&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;imgui-rs&#x2F;imgui-rs&quot;&gt;imgui-rs&lt;&#x2F;a&gt; v0.8&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#imgui-rs-v0-8&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
 &lt;&#x2F;h3&gt;
