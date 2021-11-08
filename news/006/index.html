@@ -22,16 +22,16 @@ Rust is a systems lan…">
     
 
 
-        <meta property="og:image" content="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo.png">
+        <meta property="og:image" content="https://gamedev.rs/logo.png">
         <meta property="og:image:width" content="200">
         <meta property="og:image:height" content="200">
         <meta property="og:site_name" content="Rust GameDev WG">
 
-        <link rel="stylesheet" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;style.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-16x16.png">
-        <link rel="manifest" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;site.webmanifest">
+        <link rel="stylesheet" href="https://gamedev.rs/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://gamedev.rs/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://gamedev.rs/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://gamedev.rs/favicon-16x16.png">
+        <link rel="manifest" href="https://gamedev.rs/site.webmanifest">
     
         
     
@@ -41,7 +41,7 @@ Rust is a systems lan…">
         <header class="site-header">
     <div class="wrapper">
         <a class="site-title" rel="author" href="/">
-            <img src="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo_small.png" width="48" height="48" alt="" />
+            <img src="https://gamedev.rs/logo_small.png" width="48" height="48" alt="" />
             Rust GameDev WG
         </a>
 
@@ -147,22 +147,21 @@ Most of January was spent on preparing for this.
 It was also the first anniversary of This Week in Veloren!
 There has been a devblog each week since the end of January last year.
 Here are some of the big changes in this release:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">- Added initial region system implementation
-- Added moon and clouds
-- Added proper SFX system
-- Added changelog
-- Added Scrolling Combat Text (SCT) &amp; Settings for it
-- Added options to disable clouds and to use cheaper water rendering
-- Added client-side character saving
-- Added a localization system to provide multi-language support to voxygen
-- Added fullscreen and window size to settings so that they can be persisted
-- Added coverage based scaling for pixel art 28 new mobs
-- Added waypoints
-- Added pathfinding to NPCs
-- Overhauled NPC AI
-- Pets now attack enemies and defend their owners
-- Added collars to tame wild animals
+<pre data-lang="txt" style="background-color:#2b303b;color:#c0c5ce;" class="language-txt "><code class="language-txt" data-lang="txt"><span>- Added initial region system implementation
+</span><span>- Added moon and clouds
+</span><span>- Added proper SFX system
+</span><span>- Added changelog
+</span><span>- Added Scrolling Combat Text (SCT) &amp; Settings for it
+</span><span>- Added options to disable clouds and to use cheaper water rendering
+</span><span>- Added client-side character saving
+</span><span>- Added a localization system to provide multi-language support to voxygen
+</span><span>- Added fullscreen and window size to settings so that they can be persisted
+</span><span>- Added coverage based scaling for pixel art 28 new mobs
+</span><span>- Added waypoints
+</span><span>- Added pathfinding to NPCs
+</span><span>- Overhauled NPC AI
+</span><span>- Pets now attack enemies and defend their owners
+</span><span>- Added collars to tame wild animals
 </span></code></pre>
 <p>You can read more about some specific topics:</p>
 <ul>
@@ -432,18 +431,18 @@ and get a sane FPS.</p>
 <blockquote>
 <p>To override the settings for all dependencies
 (but not any workspace member), use the &quot;*&quot; package name:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">[profile.dev.package.&quot;</span><span style="color:#a3be8c;">*</span><span style="color:#c0c5ce;">&quot;]
-</span><span style="color:#bf616a;">opt-level </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">2
-</span></code></pre></blockquote>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[profile.dev.package.&quot;</span><span style="color:#a3be8c;">*</span><span>&quot;]
+</span><span style="color:#bf616a;">opt-level </span><span>= </span><span style="color:#d08770;">2
+</span></code></pre>
+</blockquote>
 </li>
 <li>
 <p>Do not optimize build-dependencies (like <code>syn</code>) to increase
 full release build time:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">[profile.release.build-override]
-</span><span style="color:#bf616a;">opt-level </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">0
-</span></code></pre></li>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[profile.release.build-override]
+</span><span style="color:#bf616a;">opt-level </span><span>= </span><span style="color:#d08770;">0
+</span></code></pre>
+</li>
 </ul>
 <p><em>Discussions:
 <a href="https://reddit.com/r/rust_gamedev/comments/ew9pis/profile_overrides_are_stable_now">/r/rust_gamedev</a>,
@@ -568,23 +567,23 @@ and keyframable curves;</li>
 <li><a href="https://github.com/kvark/mint">mint</a> integration for 2D/3D/4D support (points, rectangles, colors, etc)</li>
 </ul>
 <p>Animation sequences example:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">keyframe::{keyframes, Keyframe, AnimationSequence};
-
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">example</span><span style="color:#c0c5ce;">() {
-    </span><span style="color:#65737e;">// (value, time) or (value, time, function)
-    </span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> sequence = keyframes![
-         (</span><span style="color:#d08770;">0.5</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">0.0</span><span style="color:#c0c5ce;">), </span><span style="color:#65737e;">// &lt;-- EaseInOut used from 0.0 to 0.3
-         </span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1.5</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">0.3</span><span style="color:#c0c5ce;">, Linear), </span><span style="color:#65737e;">// &lt;-- Linear used from 0.3 to 1.0
-         </span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">2.5</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">1.0</span><span style="color:#c0c5ce;">) </span><span style="color:#65737e;">// &lt;-- Easing function here is never used, since we&#39;re at the end
-    </span><span style="color:#c0c5ce;">];
-
-    sequence.</span><span style="color:#96b5b4;">advance_by</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">0.65</span><span style="color:#c0c5ce;">);
-
-    assert_eq!(sequence.</span><span style="color:#96b5b4;">now</span><span style="color:#c0c5ce;">(), </span><span style="color:#d08770;">2.0</span><span style="color:#c0c5ce;">);
-    assert_eq!(sequence.</span><span style="color:#96b5b4;">duration</span><span style="color:#c0c5ce;">(), </span><span style="color:#d08770;">1.0</span><span style="color:#c0c5ce;">);
-}
-</span></code></pre><h3 id="rltk-rs-v0-6-roguelike-tutorial"><a href="https://reddit.com/r/roguelikedev/comments/etiywv/sharing_saturday_295/ffi13dw/">rltk_rs v0.6</a> &amp; <a href="http://bfnightly.bracketproductions.com/rustbook">Roguelike Tutorial</a>&nbsp;<a class="anchor" href="#rltk-rs-v0-6-roguelike-tutorial" aria-hidden="true">#</a>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>keyframe::{keyframes, Keyframe, AnimationSequence};
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">example</span><span>() {
+</span><span>    </span><span style="color:#65737e;">// (value, time) or (value, time, function)
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> sequence = keyframes![
+</span><span>         (</span><span style="color:#d08770;">0.5</span><span>, </span><span style="color:#d08770;">0.0</span><span>), </span><span style="color:#65737e;">// &lt;-- EaseInOut used from 0.0 to 0.3
+</span><span>         (</span><span style="color:#d08770;">1.5</span><span>, </span><span style="color:#d08770;">0.3</span><span>, Linear), </span><span style="color:#65737e;">// &lt;-- Linear used from 0.3 to 1.0
+</span><span>         (</span><span style="color:#d08770;">2.5</span><span>, </span><span style="color:#d08770;">1.0</span><span>) </span><span style="color:#65737e;">// &lt;-- Easing function here is never used, since we&#39;re at the end
+</span><span>    ];
+</span><span>
+</span><span>    sequence.</span><span style="color:#96b5b4;">advance_by</span><span>(</span><span style="color:#d08770;">0.65</span><span>);
+</span><span>
+</span><span>    assert_eq!(sequence.</span><span style="color:#96b5b4;">now</span><span>(), </span><span style="color:#d08770;">2.0</span><span>);
+</span><span>    assert_eq!(sequence.</span><span style="color:#96b5b4;">duration</span><span>(), </span><span style="color:#d08770;">1.0</span><span>);
+</span><span>}
+</span></code></pre>
+<h3 id="rltk-rs-v0-6-roguelike-tutorial"><a href="https://reddit.com/r/roguelikedev/comments/etiywv/sharing_saturday_295/ffi13dw/">rltk_rs v0.6</a> &amp; <a href="http://bfnightly.bracketproductions.com/rustbook">Roguelike Tutorial</a>&nbsp;<a class="anchor" href="#rltk-rs-v0-6-roguelike-tutorial" aria-hidden="true">#</a>
 </h3>
 <p><img src="https://gamedev.rs/news/006/rl-c70-pewpew.gif" alt="Ranged attack demo" /></p>
 <p><a href="http://bfnightly.bracketproductions.com/rustbook">The Roguelike Tutorial</a> continues to grow:
@@ -834,7 +833,7 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
         </main>
 
         <footer class="site-footer h-card">
-    <data class="u-url" href="https:&#x2F;&#x2F;gamedev.rs"></data>
+    <data class="u-url" href="https://gamedev.rs"></data>
 
     <div class="wrapper">
 
@@ -852,18 +851,18 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
     
     
     
-    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
+    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
     
     
     
     
-    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
+    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
     
     
     
     
-    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
-    <li><a href="https:&#x2F;&#x2F;gamedev.rs&#x2F;rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
+    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
+    <li><a href="https://gamedev.rs/rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
 </ul>
 
             </div>

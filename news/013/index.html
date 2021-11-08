@@ -22,16 +22,16 @@ Rust is a systems lang…">
     
 
 
-        <meta property="og:image" content="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo.png">
+        <meta property="og:image" content="https://gamedev.rs/logo.png">
         <meta property="og:image:width" content="200">
         <meta property="og:image:height" content="200">
         <meta property="og:site_name" content="Rust GameDev WG">
 
-        <link rel="stylesheet" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;style.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-16x16.png">
-        <link rel="manifest" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;site.webmanifest">
+        <link rel="stylesheet" href="https://gamedev.rs/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://gamedev.rs/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://gamedev.rs/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://gamedev.rs/favicon-16x16.png">
+        <link rel="manifest" href="https://gamedev.rs/site.webmanifest">
     
         
     
@@ -41,7 +41,7 @@ Rust is a systems lang…">
         <header class="site-header">
     <div class="wrapper">
         <a class="site-title" rel="author" href="/">
-            <img src="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo_small.png" width="48" height="48" alt="" />
+            <img src="https://gamedev.rs/logo_small.png" width="48" height="48" alt="" />
             Rust GameDev WG
         </a>
 
@@ -529,12 +529,11 @@ tweak at runtime any number literal directly from your code.
 It works by parsing the file when a change occurs
 (inspired by <a href="http://blog.tuxedolabs.com/2018/03/13/hot-reloading-hardcoded-parameters.html">this blogpost</a> from Tuxedo labs).
 Usage example:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">inline_tweak::tweak;
-</span><span style="color:#b48ead;">loop </span><span style="color:#c0c5ce;">{
-    </span><span style="color:#65737e;">// Try changing the value while the application is running
-    </span><span style="color:#c0c5ce;">println!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, tweak!(</span><span style="color:#d08770;">3.14</span><span style="color:#c0c5ce;">));
-}
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>inline_tweak::tweak;
+</span><span style="color:#b48ead;">loop </span><span>{
+</span><span>    </span><span style="color:#65737e;">// Try changing the value while the application is running
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, tweak!(</span><span style="color:#d08770;">3.14</span><span>));
+</span><span>}
 </span></code></pre>
 <p>A <code>watch!()</code> macro that sleeps until the file is modified is also provided.</p>
 <p>The library is minimal, only requiring the <code>lazy_static</code> dependency
@@ -640,15 +639,14 @@ You can compile Egui to WASM and render it on a web page using <a href="https://
 or compile and run natively using <a href="https://crates.io/crates/egui_glium">egui_glium</a>.</p>
 <p>Check out the <a href="https://emilk.github.io/egui/index.html">Egui web demo</a>.</p>
 <p>Example:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">Window::new(&quot;</span><span style="color:#a3be8c;">Debug</span><span style="color:#c0c5ce;">&quot;).</span><span style="color:#96b5b4;">show</span><span style="color:#c0c5ce;">(ui.</span><span style="color:#96b5b4;">ctx</span><span style="color:#c0c5ce;">(), |</span><span style="color:#bf616a;">ui</span><span style="color:#c0c5ce;">| {
-    ui.</span><span style="color:#96b5b4;">label</span><span style="color:#c0c5ce;">(format!(&quot;</span><span style="color:#a3be8c;">Hello, world </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, </span><span style="color:#d08770;">123</span><span style="color:#c0c5ce;">));
-    </span><span style="color:#b48ead;">if</span><span style="color:#c0c5ce;"> ui.</span><span style="color:#96b5b4;">button</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">Save</span><span style="color:#c0c5ce;">&quot;).clicked {
-        </span><span style="color:#96b5b4;">my_save_function</span><span style="color:#c0c5ce;">();
-    }
-    ui.</span><span style="color:#96b5b4;">text_edit</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#b48ead;">mut</span><span style="color:#c0c5ce;"> my_string);
-    ui.</span><span style="color:#96b5b4;">add</span><span style="color:#c0c5ce;">(Slider::f32(&amp;</span><span style="color:#b48ead;">mut</span><span style="color:#c0c5ce;"> value, </span><span style="color:#d08770;">0.0</span><span style="color:#c0c5ce;">..=</span><span style="color:#d08770;">1.0</span><span style="color:#c0c5ce;">).</span><span style="color:#96b5b4;">text</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">float</span><span style="color:#c0c5ce;">&quot;));
-});
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span>Window::new(&quot;</span><span style="color:#a3be8c;">Debug</span><span>&quot;).</span><span style="color:#96b5b4;">show</span><span>(ui.</span><span style="color:#96b5b4;">ctx</span><span>(), |</span><span style="color:#bf616a;">ui</span><span>| {
+</span><span>    ui.</span><span style="color:#96b5b4;">label</span><span>(format!(&quot;</span><span style="color:#a3be8c;">Hello, world </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#d08770;">123</span><span>));
+</span><span>    </span><span style="color:#b48ead;">if</span><span> ui.</span><span style="color:#96b5b4;">button</span><span>(&quot;</span><span style="color:#a3be8c;">Save</span><span>&quot;).clicked {
+</span><span>        </span><span style="color:#96b5b4;">my_save_function</span><span>();
+</span><span>    }
+</span><span>    ui.</span><span style="color:#96b5b4;">text_edit</span><span>(&amp;</span><span style="color:#b48ead;">mut</span><span> my_string);
+</span><span>    ui.</span><span style="color:#96b5b4;">add</span><span>(Slider::f32(&amp;</span><span style="color:#b48ead;">mut</span><span> value, </span><span style="color:#d08770;">0.0</span><span>..=</span><span style="color:#d08770;">1.0</span><span>).</span><span style="color:#96b5b4;">text</span><span>(&quot;</span><span style="color:#a3be8c;">float</span><span>&quot;));
+</span><span>});
 </span></code></pre>
 <p><em>Discussions:
 <a href="https://reddit.com/r/rust/comments/hzwvsk/emigui_deserves_more_love">/r/rust</a></em></p>
@@ -776,15 +774,14 @@ optional namespaces and ad-hoc types, named argument syntax,
 using <code>#</code> as a prefix.
 Here is an example of this feature is being tested in
 an experimental offline 3D renderer (not open sourced):</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">// Called by `set_simple(scene: _, sdf: _, id: _)`.
-dyon_fn!{fn set_simple__scene_sdf_id(
-    scene: #&amp;mut SimpleScene,
-    sdf: #&amp;Sdf,
-    id: f64
-) {
-    scene.sdfs[id as usize] = sdf.clone()
-}}
+<pre data-lang="txt" style="background-color:#2b303b;color:#c0c5ce;" class="language-txt "><code class="language-txt" data-lang="txt"><span>// Called by `set_simple(scene: _, sdf: _, id: _)`.
+</span><span>dyon_fn!{fn set_simple__scene_sdf_id(
+</span><span>    scene: #&amp;mut SimpleScene,
+</span><span>    sdf: #&amp;Sdf,
+</span><span>    id: f64
+</span><span>) {
+</span><span>    scene.sdfs[id as usize] = sdf.clone()
+</span><span>}}
 </span></code></pre>
 <p>To follow updates on Dyon, check out the subreddit <a href="https://reddit.com/r/dyon/">/r/dyon</a>.</p>
 <hr />
@@ -858,15 +855,14 @@ a Cairo-based game in Rust for <a href="https://en.wikipedia.org/wiki/PinePhone"
 <p><img src="https://gamedev.rs/news/013/puffin.png" alt="Puffin flamegraph shown with puffin-imgui" /></p>
 <p><a href="https://github.com/EmbarkStudios/puffin">Puffin</a> is a simple instrumentation profiler created by <a href="https://www.embark-studios.com/">Embark</a>
 where you can opt-in to profile parts of your code.</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">my_function</span><span style="color:#c0c5ce;">() {
-    puffin::profile_function!():
-    ...
-    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">... {
-        puffin::profile_scope_data!(&quot;</span><span style="color:#a3be8c;">load_image</span><span style="color:#c0c5ce;">&quot;, image_name):
-        ...
-    }
-}
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">my_function</span><span>() {
+</span><span>    puffin::profile_function!():
+</span><span>    ...
+</span><span>    </span><span style="color:#b48ead;">if </span><span>... {
+</span><span>        puffin::profile_scope_data!(&quot;</span><span style="color:#a3be8c;">load_image</span><span>&quot;, image_name):
+</span><span>        ...
+</span><span>    }
+</span><span>}
 </span></code></pre>
 <p>The collected profile data can be viewed ingame with <a href="https://github.com/Gekkio/imgui-rs">imgui-rs</a>.</p>
 <h3 id="optick-profiler"><a href="https://optick.dev/">Optick</a> Profiler&nbsp;<a class="anchor" href="#optick-profiler" aria-hidden="true">#</a>
@@ -880,18 +876,18 @@ instrumentation, switch-contexts, sampling, GPU counters.</p>
 <p>This month Rust API for Optick was released: <a href="https://github.com/bombomby/optick-rs">optick-rs</a>.</p>
 <p>Also, a set of procedural macros for simplifying the process of code markup
 were published: <a href="https://crates.io/crates/optick-attr">optick-attr</a>.</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#65737e;">// Instrument current function
-</span><span style="color:#c0c5ce;">#[</span><span style="color:#bf616a;">optick_attr</span><span style="color:#c0c5ce;">::</span><span style="color:#bf616a;">profile</span><span style="color:#c0c5ce;">]
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">calc</span><span style="color:#c0c5ce;">() { </span><span style="color:#65737e;">/* Do some stuff*/ </span><span style="color:#c0c5ce;">}
-
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// Instrument current function
+</span><span>#[</span><span style="color:#bf616a;">optick_attr</span><span>::</span><span style="color:#bf616a;">profile</span><span>]
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">calc</span><span>() { </span><span style="color:#65737e;">/* Do some stuff*/ </span><span>}
+</span><span>
 </span><span style="color:#65737e;">// Generate performance capture for function
-// to {dir}/capture_name(date-time).opt.
-</span><span style="color:#c0c5ce;">#[</span><span style="color:#bf616a;">optick_attr</span><span style="color:#c0c5ce;">::</span><span style="color:#bf616a;">capture</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">capture_name</span><span style="color:#c0c5ce;">&quot;)]
-</span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-    </span><span style="color:#96b5b4;">calc</span><span style="color:#c0c5ce;">();
-}
-</span></code></pre><h3 id="wowaddonmanager-v1-0-2"><a href="https://github.com/MR2011/wowAddonManager">wowAddonManager</a> v1.0.2&nbsp;<a class="anchor" href="#wowaddonmanager-v1-0-2" aria-hidden="true">#</a>
+</span><span style="color:#65737e;">// to {dir}/capture_name(date-time).opt.
+</span><span>#[</span><span style="color:#bf616a;">optick_attr</span><span>::</span><span style="color:#bf616a;">capture</span><span>(&quot;</span><span style="color:#a3be8c;">capture_name</span><span>&quot;)]
+</span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">calc</span><span>();
+</span><span>}
+</span></code></pre>
+<h3 id="wowaddonmanager-v1-0-2"><a href="https://github.com/MR2011/wowAddonManager">wowAddonManager</a> v1.0.2&nbsp;<a class="anchor" href="#wowaddonmanager-v1-0-2" aria-hidden="true">#</a>
 </h3>
 <p><img src="https://gamedev.rs/news/013/wowAddonManager-example.png" alt="wowAddonManager Example" /></p>
 <p>The <a href="https://github.com/MR2011/wowAddonManager">wowAddonManager</a> is a terminal user interface for managing World of
@@ -980,7 +976,7 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
         </main>
 
         <footer class="site-footer h-card">
-    <data class="u-url" href="https:&#x2F;&#x2F;gamedev.rs"></data>
+    <data class="u-url" href="https://gamedev.rs"></data>
 
     <div class="wrapper">
 
@@ -998,18 +994,18 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
     
     
     
-    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
+    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
     
     
     
     
-    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
+    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
     
     
     
     
-    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
-    <li><a href="https:&#x2F;&#x2F;gamedev.rs&#x2F;rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
+    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
+    <li><a href="https://gamedev.rs/rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
 </ul>
 
             </div>

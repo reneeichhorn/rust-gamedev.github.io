@@ -22,16 +22,16 @@ Rust is a systems lang…">
     
 
 
-        <meta property="og:image" content="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo.png">
+        <meta property="og:image" content="https://gamedev.rs/logo.png">
         <meta property="og:image:width" content="200">
         <meta property="og:image:height" content="200">
         <meta property="og:site_name" content="Rust GameDev WG">
 
-        <link rel="stylesheet" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;style.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-16x16.png">
-        <link rel="manifest" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;site.webmanifest">
+        <link rel="stylesheet" href="https://gamedev.rs/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://gamedev.rs/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://gamedev.rs/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://gamedev.rs/favicon-16x16.png">
+        <link rel="manifest" href="https://gamedev.rs/site.webmanifest">
     
         
     
@@ -41,7 +41,7 @@ Rust is a systems lang…">
         <header class="site-header">
     <div class="wrapper">
         <a class="site-title" rel="author" href="/">
-            <img src="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo_small.png" width="48" height="48" alt="" />
+            <img src="https://gamedev.rs/logo_small.png" width="48" height="48" alt="" />
             Rust GameDev WG
         </a>
 
@@ -408,16 +408,15 @@ commands for building and deploying apps to iOS and Android devices.</p>
 thin abstraction over instrumented profiling crates like <code>puffin</code>, <code>optick</code>,
 <code>tracy</code>, and <code>superluminal-perf</code>.</p>
 <p>Mark up your code like this:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">#[</span><span style="color:#bf616a;">profiling</span><span style="color:#c0c5ce;">::</span><span style="color:#bf616a;">function</span><span style="color:#c0c5ce;">]
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">some_function</span><span style="color:#c0c5ce;">() {
-    </span><span style="color:#96b5b4;">burn_time</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">);
-
-    </span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> i in </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">5 </span><span style="color:#c0c5ce;">{
-        profiling::scope!(&quot;</span><span style="color:#a3be8c;">Looped Operation</span><span style="color:#c0c5ce;">&quot;);
-        </span><span style="color:#96b5b4;">burn_time</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
-    }
-}
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">profiling</span><span>::</span><span style="color:#bf616a;">function</span><span>]
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">some_function</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">burn_time</span><span>(</span><span style="color:#d08770;">5</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">5 </span><span>{
+</span><span>        profiling::scope!(&quot;</span><span style="color:#a3be8c;">Looped Operation</span><span>&quot;);
+</span><span>        </span><span style="color:#96b5b4;">burn_time</span><span>(</span><span style="color:#d08770;">1</span><span>);
+</span><span>    }
+</span><span>}
 </span></code></pre>
 <p>And get visualizations like this (<code>optick</code> and <code>puffin</code> shown):</p>
 <p><a href="https://gamedev.rs/news/016/optick.jpeg"><img src="https://gamedev.rs/news/016/optick-small.png" alt="Screenshot of Optick Profiler" /></a></p>
@@ -436,12 +435,11 @@ potentially malicious data.</li>
 </ul>
 <p>Reddit user <a href="https://reddit.com/r/rust/comments/jx32e8/rkyv_02_and_bytecheck_validation_mutable_archives/gcyfoqc">vlmutolo</a> also made a <a href="https://git.sr.ht/%7Evlmutolo/rkyv-bench/tree/master/src/main.rs">toy benchmark</a> comparing rkyv against serde
 and bincode and found that rkyv had promising initial numbers:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">serialize (bincode):    89 ns/iter
-serialize (rkyv):       86 ns/iter
-
-deserialize (bincode):  118 ns/iter
-deserialize (rkyv):     16 ns/iter
+<pre data-lang="txt" style="background-color:#2b303b;color:#c0c5ce;" class="language-txt "><code class="language-txt" data-lang="txt"><span>serialize (bincode):    89 ns/iter
+</span><span>serialize (rkyv):       86 ns/iter
+</span><span>
+</span><span>deserialize (bincode):  118 ns/iter
+</span><span>deserialize (rkyv):     16 ns/iter
 </span></code></pre>
 <p>A write-up on the <a href="https://davidkoloski.me/blog/rkyv-architecture/">architecture and internals of rkyv</a> is also available.</p>
 <p><em>Discussions:
@@ -814,7 +812,7 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
         </main>
 
         <footer class="site-footer h-card">
-    <data class="u-url" href="https:&#x2F;&#x2F;gamedev.rs"></data>
+    <data class="u-url" href="https://gamedev.rs"></data>
 
     <div class="wrapper">
 
@@ -832,18 +830,18 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
     
     
     
-    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
+    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
     
     
     
     
-    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
+    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
     
     
     
     
-    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
-    <li><a href="https:&#x2F;&#x2F;gamedev.rs&#x2F;rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
+    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
+    <li><a href="https://gamedev.rs/rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
 </ul>
 
             </div>

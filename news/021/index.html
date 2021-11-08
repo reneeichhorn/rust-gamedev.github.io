@@ -22,16 +22,16 @@ Rust is a systems lang…">
     
 
 
-        <meta property="og:image" content="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo.png">
+        <meta property="og:image" content="https://gamedev.rs/logo.png">
         <meta property="og:image:width" content="200">
         <meta property="og:image:height" content="200">
         <meta property="og:site_name" content="Rust GameDev WG">
 
-        <link rel="stylesheet" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;style.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-16x16.png">
-        <link rel="manifest" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;site.webmanifest">
+        <link rel="stylesheet" href="https://gamedev.rs/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://gamedev.rs/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://gamedev.rs/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://gamedev.rs/favicon-16x16.png">
+        <link rel="manifest" href="https://gamedev.rs/site.webmanifest">
     
         
     
@@ -41,7 +41,7 @@ Rust is a systems lang…">
         <header class="site-header">
     <div class="wrapper">
         <a class="site-title" rel="author" href="/">
-            <img src="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo_small.png" width="48" height="48" alt="" />
+            <img src="https://gamedev.rs/logo_small.png" width="48" height="48" alt="" />
             Rust GameDev WG
         </a>
 
@@ -556,22 +556,21 @@ like <code>puffin</code>, <code>optick</code>, <code>tracing</code>, <code>tracy
 <code>wgpu</code>.</p>
 <h3 id="simple-async-local-executor"><a href="https://github.com/enlightware/simple-async-local-executor">simple-async-local-executor</a>&nbsp;<a class="anchor" href="#simple-async-local-executor" aria-hidden="true">#</a>
 </h3>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> executor = Executor::default();
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> events = [executor.</span><span style="color:#96b5b4;">create_event_handle</span><span style="color:#c0c5ce;">(), executor.</span><span style="color:#96b5b4;">create_event_handle</span><span style="color:#c0c5ce;">()];
-
-async </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">wait_event</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">events</span><span style="color:#c0c5ce;">: [EventHandle; 2], </span><span style="color:#bf616a;">executor</span><span style="color:#c0c5ce;">: Executor) {
-    executor.</span><span style="color:#96b5b4;">event</span><span style="color:#c0c5ce;">(&amp;events[</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">]).await;
-    executor.</span><span style="color:#96b5b4;">event</span><span style="color:#c0c5ce;">(&amp;events[</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">]).await;
-}
-
-executor.</span><span style="color:#96b5b4;">spawn</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">wait_event</span><span style="color:#c0c5ce;">(events.</span><span style="color:#96b5b4;">clone</span><span style="color:#c0c5ce;">(), executor.</span><span style="color:#96b5b4;">clone</span><span style="color:#c0c5ce;">()));
-assert_eq!(executor.</span><span style="color:#96b5b4;">step</span><span style="color:#c0c5ce;">(), </span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">);
-assert_eq!(executor.</span><span style="color:#96b5b4;">step</span><span style="color:#c0c5ce;">(), </span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">);
-executor.</span><span style="color:#96b5b4;">notify_event</span><span style="color:#c0c5ce;">(&amp;events[</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">]);
-assert_eq!(executor.</span><span style="color:#96b5b4;">step</span><span style="color:#c0c5ce;">(), </span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">);
-executor.</span><span style="color:#96b5b4;">notify_event</span><span style="color:#c0c5ce;">(&amp;events[</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">]);
-assert_eq!(executor.</span><span style="color:#96b5b4;">step</span><span style="color:#c0c5ce;">(), </span><span style="color:#d08770;">false</span><span style="color:#c0c5ce;">);
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> executor = Executor::default();
+</span><span style="color:#b48ead;">let</span><span> events = [executor.</span><span style="color:#96b5b4;">create_event_handle</span><span>(), executor.</span><span style="color:#96b5b4;">create_event_handle</span><span>()];
+</span><span>
+</span><span>async </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">wait_event</span><span>(</span><span style="color:#bf616a;">events</span><span>: [EventHandle; 2], </span><span style="color:#bf616a;">executor</span><span>: Executor) {
+</span><span>    executor.</span><span style="color:#96b5b4;">event</span><span>(&amp;events[</span><span style="color:#d08770;">0</span><span>]).await;
+</span><span>    executor.</span><span style="color:#96b5b4;">event</span><span>(&amp;events[</span><span style="color:#d08770;">1</span><span>]).await;
+</span><span>}
+</span><span>
+</span><span>executor.</span><span style="color:#96b5b4;">spawn</span><span>(</span><span style="color:#96b5b4;">wait_event</span><span>(events.</span><span style="color:#96b5b4;">clone</span><span>(), executor.</span><span style="color:#96b5b4;">clone</span><span>()));
+</span><span>assert_eq!(executor.</span><span style="color:#96b5b4;">step</span><span>(), </span><span style="color:#d08770;">true</span><span>);
+</span><span>assert_eq!(executor.</span><span style="color:#96b5b4;">step</span><span>(), </span><span style="color:#d08770;">true</span><span>);
+</span><span>executor.</span><span style="color:#96b5b4;">notify_event</span><span>(&amp;events[</span><span style="color:#d08770;">0</span><span>]);
+</span><span>assert_eq!(executor.</span><span style="color:#96b5b4;">step</span><span>(), </span><span style="color:#d08770;">true</span><span>);
+</span><span>executor.</span><span style="color:#96b5b4;">notify_event</span><span>(&amp;events[</span><span style="color:#d08770;">1</span><span>]);
+</span><span>assert_eq!(executor.</span><span style="color:#96b5b4;">step</span><span>(), </span><span style="color:#d08770;">false</span><span>);
 </span></code></pre>
 <p><a href="https://github.com/enlightware/simple-async-local-executor">simple-async-local-executor</a> by <a href="https://enlightware.ch">Enlightware</a>
 is a single-threaded polling-based executor suitable for use in games, embedded
@@ -730,7 +729,7 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
         </main>
 
         <footer class="site-footer h-card">
-    <data class="u-url" href="https:&#x2F;&#x2F;gamedev.rs"></data>
+    <data class="u-url" href="https://gamedev.rs"></data>
 
     <div class="wrapper">
 
@@ -748,18 +747,18 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
     
     
     
-    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
+    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
     
     
     
     
-    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
+    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
     
     
     
     
-    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
-    <li><a href="https:&#x2F;&#x2F;gamedev.rs&#x2F;rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
+    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
+    <li><a href="https://gamedev.rs/rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
 </ul>
 
             </div>

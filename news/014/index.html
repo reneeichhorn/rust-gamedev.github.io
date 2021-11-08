@@ -22,16 +22,16 @@ Rust is a systems lang…">
     
 
 
-        <meta property="og:image" content="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo.png">
+        <meta property="og:image" content="https://gamedev.rs/logo.png">
         <meta property="og:image:width" content="200">
         <meta property="og:image:height" content="200">
         <meta property="og:site_name" content="Rust GameDev WG">
 
-        <link rel="stylesheet" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;style.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-16x16.png">
-        <link rel="manifest" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;site.webmanifest">
+        <link rel="stylesheet" href="https://gamedev.rs/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://gamedev.rs/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://gamedev.rs/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://gamedev.rs/favicon-16x16.png">
+        <link rel="manifest" href="https://gamedev.rs/site.webmanifest">
     
         
     
@@ -41,7 +41,7 @@ Rust is a systems lang…">
         <header class="site-header">
     <div class="wrapper">
         <a class="site-title" rel="author" href="/">
-            <img src="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo_small.png" width="48" height="48" alt="" />
+            <img src="https://gamedev.rs/logo_small.png" width="48" height="48" alt="" />
             Rust GameDev WG
         </a>
 
@@ -504,27 +504,26 @@ wrapped in <code>Option&lt;T&gt;</code>.</p>
 <p>Data structures like Thunderdome's <code>Arena</code> store values and return keys that can
 be later used to access those values. These keys are stable across removals and
 have a generation counter to solve the <a href="https://en.wikipedia.org/wiki/ABA_problem">ABA Problem</a>.</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> arena = Arena::new();
-
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> foo = arena.</span><span style="color:#96b5b4;">insert</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">Foo</span><span style="color:#c0c5ce;">&quot;);
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> bar = arena.</span><span style="color:#96b5b4;">insert</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">Bar</span><span style="color:#c0c5ce;">&quot;);
-
-assert_eq!(arena[foo], &quot;</span><span style="color:#a3be8c;">Foo</span><span style="color:#c0c5ce;">&quot;);
-assert_eq!(arena[bar], &quot;</span><span style="color:#a3be8c;">Bar</span><span style="color:#c0c5ce;">&quot;);
-
-arena[bar] = &quot;</span><span style="color:#a3be8c;">Replaced</span><span style="color:#c0c5ce;">&quot;;
-assert_eq!(arena[bar], &quot;</span><span style="color:#a3be8c;">Replaced</span><span style="color:#c0c5ce;">&quot;);
-
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> foo_value = arena.</span><span style="color:#96b5b4;">remove</span><span style="color:#c0c5ce;">(foo);
-assert_eq!(foo_value, Some(&quot;</span><span style="color:#a3be8c;">Foo</span><span style="color:#c0c5ce;">&quot;));
-
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let mut</span><span> arena = Arena::new();
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> foo = arena.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Foo</span><span>&quot;);
+</span><span style="color:#b48ead;">let</span><span> bar = arena.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Bar</span><span>&quot;);
+</span><span>
+</span><span>assert_eq!(arena[foo], &quot;</span><span style="color:#a3be8c;">Foo</span><span>&quot;);
+</span><span>assert_eq!(arena[bar], &quot;</span><span style="color:#a3be8c;">Bar</span><span>&quot;);
+</span><span>
+</span><span>arena[bar] = &quot;</span><span style="color:#a3be8c;">Replaced</span><span>&quot;;
+</span><span>assert_eq!(arena[bar], &quot;</span><span style="color:#a3be8c;">Replaced</span><span>&quot;);
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> foo_value = arena.</span><span style="color:#96b5b4;">remove</span><span>(foo);
+</span><span>assert_eq!(foo_value, Some(&quot;</span><span style="color:#a3be8c;">Foo</span><span>&quot;));
+</span><span>
 </span><span style="color:#65737e;">// The slot previously used by foo will be reused for baz.
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> baz = arena.</span><span style="color:#96b5b4;">insert</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">Baz</span><span style="color:#c0c5ce;">&quot;);
-assert_eq!(arena[baz], &quot;</span><span style="color:#a3be8c;">Baz</span><span style="color:#c0c5ce;">&quot;);
-
+</span><span style="color:#b48ead;">let</span><span> baz = arena.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Baz</span><span>&quot;);
+</span><span>assert_eq!(arena[baz], &quot;</span><span style="color:#a3be8c;">Baz</span><span>&quot;);
+</span><span>
 </span><span style="color:#65737e;">// foo is no longer a valid key.
-</span><span style="color:#c0c5ce;">assert_eq!(arena.</span><span style="color:#96b5b4;">get</span><span style="color:#c0c5ce;">(foo), None);
+</span><span>assert_eq!(arena.</span><span style="color:#96b5b4;">get</span><span>(foo), None);
 </span></code></pre>
 <p><em>Discussions:
 <a href="https://twitter.com/LPGhatguy/status/1303375906493276160">twitter</a></em></p>
@@ -602,21 +601,20 @@ stabilized in <a href="https://blog.rust-lang.org/2020/08/27/Rust-1.46.0.html">R
 <p>Crevice depends heavily on <a href="https://github.com/kvark/mint">mint</a> to support almost any Rust math library. It
 also contains helpers for safely sizing and writing buffers, making dynamic
 buffer layout a breeze.</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">#[</span><span style="color:#bf616a;">derive</span><span style="color:#c0c5ce;">(AsStd140)]
-</span><span style="color:#b48ead;">struct </span><span style="color:#c0c5ce;">MainUniform {
-    </span><span style="color:#bf616a;">orientation</span><span style="color:#c0c5ce;">: mint::ColumnMatrix3&lt;</span><span style="color:#b48ead;">f32</span><span style="color:#c0c5ce;">&gt;,
-    </span><span style="color:#bf616a;">position</span><span style="color:#c0c5ce;">: mint::Vector3&lt;</span><span style="color:#b48ead;">f32</span><span style="color:#c0c5ce;">&gt;,
-    </span><span style="color:#bf616a;">scale</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">f32</span><span style="color:#c0c5ce;">,
-}
-
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> value = MainUniform {
-    orientation: cgmath::Matrix3::identity().</span><span style="color:#96b5b4;">into</span><span style="color:#c0c5ce;">(),
-    position: [</span><span style="color:#d08770;">1.0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">2.0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">3.0</span><span style="color:#c0c5ce;">].</span><span style="color:#96b5b4;">into</span><span style="color:#c0c5ce;">(),
-    scale: </span><span style="color:#d08770;">4.0</span><span style="color:#c0c5ce;">,
-};
-
-</span><span style="color:#96b5b4;">upload_data_to_gpu</span><span style="color:#c0c5ce;">(value.</span><span style="color:#96b5b4;">as_std140</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">as_bytes</span><span style="color:#c0c5ce;">());
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">derive</span><span>(AsStd140)]
+</span><span style="color:#b48ead;">struct </span><span>MainUniform {
+</span><span>    </span><span style="color:#bf616a;">orientation</span><span>: mint::ColumnMatrix3&lt;</span><span style="color:#b48ead;">f32</span><span>&gt;,
+</span><span>    </span><span style="color:#bf616a;">position</span><span>: mint::Vector3&lt;</span><span style="color:#b48ead;">f32</span><span>&gt;,
+</span><span>    </span><span style="color:#bf616a;">scale</span><span>: </span><span style="color:#b48ead;">f32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> value = MainUniform {
+</span><span>    orientation: cgmath::Matrix3::identity().</span><span style="color:#96b5b4;">into</span><span>(),
+</span><span>    position: [</span><span style="color:#d08770;">1.0</span><span>, </span><span style="color:#d08770;">2.0</span><span>, </span><span style="color:#d08770;">3.0</span><span>].</span><span style="color:#96b5b4;">into</span><span>(),
+</span><span>    scale: </span><span style="color:#d08770;">4.0</span><span>,
+</span><span>};
+</span><span>
+</span><span style="color:#96b5b4;">upload_data_to_gpu</span><span>(value.</span><span style="color:#96b5b4;">as_std140</span><span>().</span><span style="color:#96b5b4;">as_bytes</span><span>());
 </span></code></pre>
 <p><em>Discussions:
 <a href="https://twitter.com/LPGhatguy/status/1308499131212599296">twitter</a></em></p>
@@ -871,7 +869,7 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
         </main>
 
         <footer class="site-footer h-card">
-    <data class="u-url" href="https:&#x2F;&#x2F;gamedev.rs"></data>
+    <data class="u-url" href="https://gamedev.rs"></data>
 
     <div class="wrapper">
 
@@ -889,18 +887,18 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
     
     
     
-    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
+    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
     
     
     
     
-    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
+    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
     
     
     
     
-    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
-    <li><a href="https:&#x2F;&#x2F;gamedev.rs&#x2F;rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
+    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
+    <li><a href="https://gamedev.rs/rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
 </ul>
 
             </div>

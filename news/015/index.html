@@ -22,16 +22,16 @@ Rust is a systems lang…">
     
 
 
-        <meta property="og:image" content="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo.png">
+        <meta property="og:image" content="https://gamedev.rs/logo.png">
         <meta property="og:image:width" content="200">
         <meta property="og:image:height" content="200">
         <meta property="og:site_name" content="Rust GameDev WG">
 
-        <link rel="stylesheet" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;style.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;favicon-16x16.png">
-        <link rel="manifest" href="https:&#x2F;&#x2F;gamedev.rs&#x2F;site.webmanifest">
+        <link rel="stylesheet" href="https://gamedev.rs/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://gamedev.rs/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://gamedev.rs/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://gamedev.rs/favicon-16x16.png">
+        <link rel="manifest" href="https://gamedev.rs/site.webmanifest">
     
         
     
@@ -41,7 +41,7 @@ Rust is a systems lang…">
         <header class="site-header">
     <div class="wrapper">
         <a class="site-title" rel="author" href="/">
-            <img src="https:&#x2F;&#x2F;gamedev.rs&#x2F;logo_small.png" width="48" height="48" alt="" />
+            <img src="https://gamedev.rs/logo_small.png" width="48" height="48" alt="" />
             Rust GameDev WG
         </a>
 
@@ -614,17 +614,17 @@ is a breaking change and thus the version jumped from 0.9 to 0.10.</p>
 functions allow a vector's elements to be reordered. The result can be a vector
 of a different size to the input. Swizzles are implemented with SIMD
 instructions where possible, e.g. for the <code>Vec4</code> type.</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> v = </span><span style="color:#96b5b4;">vec4</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1.0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">2.0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">3.0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">4.0</span><span style="color:#c0c5ce;">);
-
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> v = </span><span style="color:#96b5b4;">vec4</span><span>(</span><span style="color:#d08770;">1.0</span><span>, </span><span style="color:#d08770;">2.0</span><span>, </span><span style="color:#d08770;">3.0</span><span>, </span><span style="color:#d08770;">4.0</span><span>);
+</span><span>
 </span><span style="color:#65737e;">// Reverse elements of `v`.
 </span><span style="color:#65737e;">// If SIMD is supported this will use a vector shuffle.
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> wzyx = v.</span><span style="color:#96b5b4;">wzyx</span><span style="color:#c0c5ce;">();
-
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> yzw = v.</span><span style="color:#96b5b4;">yzw</span><span style="color:#c0c5ce;">(); </span><span style="color:#65737e;">// Swizzle the yzw elements of `v` into a `Vec3`
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> xy = v.</span><span style="color:#96b5b4;">xy</span><span style="color:#c0c5ce;">(); </span><span style="color:#65737e;">// You can swizzle from a `Vec4` to a `Vec2`
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> yyxx = xy.</span><span style="color:#96b5b4;">yyxx</span><span style="color:#c0c5ce;">(); </span><span style="color:#65737e;">// And back again
-</span></code></pre></li>
+</span><span style="color:#b48ead;">let</span><span> wzyx = v.</span><span style="color:#96b5b4;">wzyx</span><span>();
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> yzw = v.</span><span style="color:#96b5b4;">yzw</span><span>(); </span><span style="color:#65737e;">// Swizzle the yzw elements of `v` into a `Vec3`
+</span><span style="color:#b48ead;">let</span><span> xy = v.</span><span style="color:#96b5b4;">xy</span><span>(); </span><span style="color:#65737e;">// You can swizzle from a `Vec4` to a `Vec2`
+</span><span style="color:#b48ead;">let</span><span> yyxx = xy.</span><span style="color:#96b5b4;">yyxx</span><span>(); </span><span style="color:#65737e;">// And back again
+</span></code></pre>
+</li>
 <li>
 <p><a href="https://rust-embedded.github.io/book/intro/no-std.html">no_std</a> support was added, using <a href="https://github.com/rust-lang/libm">libm</a> for math functions that are not
 implemented in <code>core</code>.</p>
@@ -756,19 +756,18 @@ made to create language in this space, none of them have gained any notable
 traction in the gamedev community.</p>
 </blockquote>
 <p>The code for the sky example above:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">#[</span><span style="color:#bf616a;">spirv</span><span style="color:#c0c5ce;">(entry = &quot;</span><span style="color:#a3be8c;">fragment</span><span style="color:#c0c5ce;">&quot;)]
-</span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">main_fs</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">input</span><span style="color:#c0c5ce;">: Input&lt;Vec4&gt;, </span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">output</span><span style="color:#c0c5ce;">: Output&lt;Vec4&gt;) {
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> dir: Vec3 = input.</span><span style="color:#96b5b4;">load</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">truncate</span><span style="color:#c0c5ce;">();
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> cs_pos = Vec4(dir.</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, -dir.</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">1.0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">1.0</span><span style="color:#c0c5ce;">);
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> ws_pos = {
-        </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> p = clip_to_world.</span><span style="color:#96b5b4;">mul_vec4</span><span style="color:#c0c5ce;">(cs_pos);
-        p.</span><span style="color:#96b5b4;">truncate</span><span style="color:#c0c5ce;">() / p.</span><span style="color:#d08770;">3
-    </span><span style="color:#c0c5ce;">};
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> dir = (ws_pos - eye_pos).</span><span style="color:#96b5b4;">normalize</span><span style="color:#c0c5ce;">();
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> color = </span><span style="color:#96b5b4;">sky</span><span style="color:#c0c5ce;">(dir, sun_pos); </span><span style="color:#65737e;">// evaluate Preetham sky model
-</span><span style="color:#c0c5ce;">    output.</span><span style="color:#96b5b4;">store</span><span style="color:#c0c5ce;">(color.</span><span style="color:#96b5b4;">extend</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">0.0</span><span style="color:#c0c5ce;">))
-}
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">spirv</span><span>(entry = &quot;</span><span style="color:#a3be8c;">fragment</span><span>&quot;)]
+</span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">main_fs</span><span>(</span><span style="color:#bf616a;">input</span><span>: Input&lt;Vec4&gt;, </span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">output</span><span>: Output&lt;Vec4&gt;) {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> dir: Vec3 = input.</span><span style="color:#96b5b4;">load</span><span>().</span><span style="color:#96b5b4;">truncate</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> cs_pos = Vec4(dir.</span><span style="color:#d08770;">0</span><span>, -dir.</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">1.0</span><span>, </span><span style="color:#d08770;">1.0</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ws_pos = {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> p = clip_to_world.</span><span style="color:#96b5b4;">mul_vec4</span><span>(cs_pos);
+</span><span>        p.</span><span style="color:#96b5b4;">truncate</span><span>() / p.</span><span style="color:#d08770;">3
+</span><span>    };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> dir = (ws_pos - eye_pos).</span><span style="color:#96b5b4;">normalize</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> color = </span><span style="color:#96b5b4;">sky</span><span>(dir, sun_pos); </span><span style="color:#65737e;">// evaluate Preetham sky model
+</span><span>    output.</span><span style="color:#96b5b4;">store</span><span>(color.</span><span style="color:#96b5b4;">extend</span><span>(</span><span style="color:#d08770;">0.0</span><span>))
+</span><span>}
 </span></code></pre>
 <p><em>Discussions:
 <a href="https://reddit.com/r/rust/comments/jg056t/introducing_rustgpu_v01">/r/rust</a>,
@@ -1067,7 +1066,7 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
         </main>
 
         <footer class="site-footer h-card">
-    <data class="u-url" href="https:&#x2F;&#x2F;gamedev.rs"></data>
+    <data class="u-url" href="https://gamedev.rs"></data>
 
     <div class="wrapper">
 
@@ -1085,18 +1084,18 @@ or <a href="https://reddit.com/r/rust_gamedev">/r/rust_gamedev subreddit</a> if 
     
     
     
-    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
+    <li><a href="https://github.com/rust-gamedev" title="rust-gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#github"></use></svg> Github (rust-gamedev)</a></li>
     
     
     
     
-    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
+    <li><a href="https://twitter.com/rust_gamedev" title="rust_gamedev"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#twitter"></use></svg> Twitter (rust_gamedev)</a></li>
     
     
     
     
-    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
-    <li><a href="https:&#x2F;&#x2F;gamedev.rs&#x2F;rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https:&#x2F;&#x2F;gamedev.rs&#x2F;minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
+    <li><a href="https://discord.gg/j6QJsMd" title="Discord"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#discord"></use></svg> Discord (#wg-gamedev)</a></li>
+    <li><a href="https://gamedev.rs/rss.xml" title="RSS"><svg class="svg-icon grey"><use xlink:href="https://gamedev.rs/minima-social-icons.svg#rss"></use></svg> RSS feed</a></li>
 </ul>
 
             </div>
