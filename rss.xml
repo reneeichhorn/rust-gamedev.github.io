@@ -35,6 +35,7 @@ Feel free to send PRs about your own projects!&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;027&#x2F;#engine-updates&quot;&gt;Engine Updates&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;027&#x2F;#tooling-updates&quot;&gt;Tooling Updates&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;027&#x2F;#library-updates&quot;&gt;Library Updates&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;027&#x2F;#other-news&quot;&gt;Other News&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;027&#x2F;#meeting-minutes&quot;&gt;Meeting Minutes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;027&#x2F;#discussions&quot;&gt;Discussions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gamedev.rs&#x2F;news&#x2F;027&#x2F;#requests-for-contribution&quot;&gt;Requests for Contribution&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -461,6 +462,74 @@ and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;godot-rust&#x2F;godot-rus
 section in the book to help promote games, applications, and libraries&#x2F;tools
 that are working with godot-rust. If you have a project that you would like to
 be included, please feel free to reach out to the godot-rust team.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;other-news&quot;&gt;Other News&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#other-news&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;!-- One-liners for plan items that haven&#x27;t got their own sections. --&gt;
+&lt;ul&gt;
+&lt;li&gt;Other game updates:
+&lt;ul&gt;
+&lt;li&gt;LD49 &lt;a href=&quot;https:&#x2F;&#x2F;ldjam.com&#x2F;events&#x2F;ludum-dare&#x2F;49&#x2F;unbalanced-brawl&quot;&gt;Unbalanced Brawl&lt;&#x2F;a&gt;
+(&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;yopox&#x2F;LD49&quot;&gt;GitHub&lt;&#x2F;a&gt;)
+is an autochess with ever-changing rules in the shop.&lt;&#x2F;li&gt;
+&lt;li&gt;LD49 &lt;a href=&quot;https:&#x2F;&#x2F;ldjam.com&#x2F;events&#x2F;ludum-dare&#x2F;49&#x2F;chevalchemy-a-hoof-of-concept&quot;&gt;Chevalchemy&lt;&#x2F;a&gt;
+(&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;xlambein&#x2F;ldjam49&quot;&gt;GitHub&lt;&#x2F;a&gt;) is a game where you play
+as a horse alchemist working for the great Neighcolas Flamel.&lt;&#x2F;li&gt;
+&lt;li&gt;LD49 &lt;a href=&quot;https:&#x2F;&#x2F;ldjam.com&#x2F;events&#x2F;ludum-dare&#x2F;49&#x2F;procedural-spider&quot;&gt;Proc Spider&lt;&#x2F;a&gt;
+(&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;darthdeus&#x2F;procedural-spider&quot;&gt;GitHub&lt;&#x2F;a&gt;)
+is a small game where you play a big spider chasing small spiders.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mk48.io&quot;&gt;mk48.io&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SoftbearStudios&#x2F;mk48&quot;&gt;GitHub&lt;&#x2F;a&gt;) is
+an online multiplayer naval combat game, in which you take command
+of a ship and sail your way to victory.&lt;&#x2F;li&gt;
+&lt;li&gt;Tweets about &lt;a href=&quot;https:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;1673940&#x2F;BITGUN&quot;&gt;Bitgun&lt;&#x2F;a&gt; progress:
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;LogLogGames&#x2F;status&#x2F;1449485172114591749&quot;&gt;new inventory and weapon systems&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;LogLogGames&#x2F;status&#x2F;1449742242734772225&quot;&gt;new item pickup&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;LogLogGames&#x2F;status&#x2F;1450922044065992708&quot;&gt;jumping zombies&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;LogLogGames&#x2F;status&#x2F;1451088866052489218&quot;&gt;death animation&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;roguelikedev&#x2F;comments&#x2F;pqbvv1&#x2F;sharing_saturday_380&#x2F;hdbx5xt&quot;&gt;An update about the progress of Rust version of Nox Futura&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;RecallSingular1&quot;&gt;A Recall Singularity&lt;&#x2F;a&gt; shared a &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=nsjnCZslNdg&quot;&gt;YouTube video&lt;&#x2F;a&gt;
+that shows new shooting sounds, camera movement, and asteroid dragging.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Other learning material updates:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=G-IuH6R-yD8&quot;&gt;A video by TanTan&lt;&#x2F;a&gt;
+about rewriting a voxel game three times: in Unity, Rust (no engine) and Bevy.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Other engine updates:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;qena0b&#x2F;media_rg3d_game_engine_live_coding&quot;&gt;A recording of the first rg3d live-coding stream&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;The first prototype of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;porky11&#x2F;vngine-rs&quot;&gt;VNgine&lt;&#x2F;a&gt; - Visual Novel Engine -
+&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;pyvcen&#x2F;first_prototype_of_vngine&quot;&gt;was announced on &#x2F;r&#x2F;rust&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Also, a general purpose graphics engine &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ElhamAryanpur&#x2F;BlueEngine&quot;&gt;Blue Engine&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust_gamedev&#x2F;comments&#x2F;q4rana&#x2F;blue_engine&quot;&gt;was announced on &#x2F;r&#x2F;rust_gamedev&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Other tooling updates:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;TomasKralCZ&#x2F;Fearless-NES&quot;&gt;Fearless-NES&lt;&#x2F;a&gt; is a NES emulator written using egui, macroquad, and GilRs.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;not-fl3&#x2F;FishFight-The-Prequel&#x2F;tree&#x2F;main&#x2F;fishsteam&quot;&gt;FishSteam&lt;&#x2F;a&gt; is a tool for deploying SteamWorks-enabled steam builds
+for Windows&#x2F;macOS&#x2F;Linux without SteamWorks SDK on a CI.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Other library updates:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;LPGhatguy&#x2F;crevice&#x2F;blob&#x2F;main&#x2F;CHANGELOG.md#080---2021-10-26&quot;&gt;Crevice v0.8&lt;&#x2F;a&gt;
+brings a direct support for many math libraries
+and allows to generate GLSL source from structs.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;AlbinSjoegren&#x2F;SPV&quot;&gt;SPV&lt;&#x2F;a&gt; 0.0.6 is the second pre-alpha release of a celestial object position
+and velocity calculator.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;LPGhatguy&#x2F;thunderdome&#x2F;blob&#x2F;main&#x2F;CHANGELOG.md&quot;&gt;Thunderdome&lt;&#x2F;a&gt; generational arena library released
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;LPGhatguy&#x2F;thunderdome&#x2F;blob&#x2F;main&#x2F;CHANGELOG.md&quot;&gt;0.4..0.5 versions&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;qeue67&#x2F;announcing_egui_015&quot;&gt;egui 0.15&lt;&#x2F;a&gt; brings:
+syntax highlighting, horizontal scrolling, new monospace font,
+and a new opt-in glow backend for eframe.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;ernerfeldt&#x2F;status&#x2F;1447961523696066564&quot;&gt;New puffin-egui&#x2F;puffin-viewer&lt;&#x2F;a&gt;
+allows selection and manipulation of multiple frames.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;QodotPlugin&#x2F;shalrath&quot;&gt;Shalrath&lt;&#x2F;a&gt; is a fully-safe Rust representation and nom parser for Quake map files.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;meeting-minutes&quot;&gt;Meeting Minutes&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#meeting-minutes&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
 &lt;p&gt;There is currently discussion ongoing around bringing back the
